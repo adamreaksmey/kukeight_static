@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -9,6 +9,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./photos/logo.png" />
       </Head>
+      <div className="text-nowrap title">
+        <div className="d-inline title-one">KUKeight</div>&nbsp;&nbsp;
+        <div className="title-two d-inline">Studio</div>
+      </div>
     </>
-  )
+  );
 }

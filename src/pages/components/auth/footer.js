@@ -5,27 +5,27 @@ export default function Footer() {
   return (
     <div className="footer">
       <Container className="d-flex justify-content-center align-items-center">
-        <Nav className="gap-3">
-          <Link href="/" passHref>
-            <Nav.Link className="home">Home</Nav.Link>
+        <Nav className="gap-5">
+          <Link href="/home" passHref>
+            Home
           </Link>
           <Link href="/about" passHref>
-            <Nav.Link className="about-us">About Us</Nav.Link>
+            About Us
           </Link>
           <Link href="/support" passHref>
-            <Nav.Link className="support-us">Support Us</Nav.Link>
+            Support Us
           </Link>
           <Link href="/help" passHref>
-            <Nav.Link className="help">Help</Nav.Link>
+            Help
           </Link>
           <Link href="/faq" passHref>
-            <Nav.Link className="faq">FAQ</Nav.Link>
+            FAQ
           </Link>
           <Link href="/privacy" passHref>
-            <Nav.Link className="privacy">Privacy & Policy</Nav.Link>
+            Privacy & Policy
           </Link>
           <Link href="/license" passHref>
-            <Nav.Link className="license">Licensing</Nav.Link>
+            Licensing
           </Link>
         </Nav>
       </Container>

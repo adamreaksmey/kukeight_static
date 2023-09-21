@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 body {
   background-image: url("../../../public/photos/main-background.jpeg");
@@ -7,17 +7,25 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.main-layout {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1vw;
-  gap: 3vw;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.title {
+  /* transform */
+}
+
+.title-one {
+  font-size: 2.5rem;
+}
+
+.title-two {
+  font-size: 1.5rem;
+}
+
+@import url("./footer.css");

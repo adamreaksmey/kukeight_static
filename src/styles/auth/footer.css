@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  gap: 3vw;
+}
+
+.footer a {
+  color: black !important;
+  transition: transform 0.2s ease;
+}
+
+.footer a:hover {
+  transform: scale(1.5);
+}
