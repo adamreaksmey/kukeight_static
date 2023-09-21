@@ -1,7 +1,9 @@
 import Head from "next/head";
 import MainLayout from "./layout";
+import Logo from "../../public/photos/logo.png";
 
 export default function Home() {
+  const logoImage = Logo.src;
   return (
     <>
       <Head>
@@ -12,8 +14,11 @@ export default function Home() {
       </Head>
       <MainLayout>
         <div className="text-nowrap title">
-          <div className="d-inline title-one">KUKeight</div>&nbsp;&nbsp;
-          <div className="title-two d-inline">Studio</div>
+          <img className="logo-img" src={logoImage} width="130" height="130" />
+          <div className="full-title d-inline">
+            <div className="d-inline title-one">UKeight</div>&nbsp;&nbsp;
+            <div className="title-two d-inline">Studio</div>
+          </div>
         </div>
       </MainLayout>
     </>
