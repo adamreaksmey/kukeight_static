@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 body {
-  background-image: url("../../../public/photos/main-background.jpeg");
+  /* background-image: url("../../../public/photos/main-background.jpeg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -12,6 +12,9 @@ body {
 }
 
 .main-layout {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
