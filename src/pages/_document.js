@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
+import MainLayout from "./layout";
 
 export default function Document() {
   return (
@@ -6,8 +7,10 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <NextScript />
+        <MainLayout>
+          <NextScript />
+        </MainLayout>
       </body>
     </Html>
-  )
+  );
 }
