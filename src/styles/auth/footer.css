@@ -13,6 +13,7 @@
 .footer a {
   color: black !important;
   transition: transform 0.2s ease;
+  text-decoration: none !important;
 }
 
 .footer a:hover {

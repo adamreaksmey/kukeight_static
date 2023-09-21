@@ -4,6 +4,7 @@ body {
   background-image: url("../../../public/photos/main-background.jpeg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -17,7 +18,17 @@ body {
 }
 
 .title {
-  /* transform */
+  font-weight: bold;
+  position: fixed;
+  left: 72%;
+  top: 12%;
+  transform: translate(-50%, -12%);
+}
+
+@media (max-width: 768px) {
+  .title {
+    position: static;
+  }
 }
 
 .title-one {
