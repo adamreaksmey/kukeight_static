@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MainLayout from "@/layout";
+import MainLayout from "../layout";
 import Logo from "../../public/photos/logo.png";
 import SlideShow from "@/components/auth/slideshow";
 import Auth from "@/components/auth/loginout";
