@@ -19,6 +19,7 @@ export default function Home() {
             <div className="d-inline title-one">UKeight</div>&nbsp;&nbsp;
             <div className="title-two d-inline">Studio</div>
           </div>
+          <div className="title-3"> Welcome...wanderers!</div>
         </div>
       </MainLayout>
     </>

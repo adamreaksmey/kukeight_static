@@ -38,6 +38,12 @@ body {
   font-size: 1.5rem;
 }
 
+.title-3 {
+  position: relative;
+  left: 7.2vw;
+  top: -2vw;
+}
+
 .full-title {
   position: relative;
   top: 17px;
