@@ -11,7 +11,7 @@
 }
 
 .footer a {
-  color: black !important;
+  color: rgb(180, 183, 73) !important;
   transition: transform 0.2s ease;
   text-decoration: none !important;
 }

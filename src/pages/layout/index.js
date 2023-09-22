@@ -1,12 +1,25 @@
 import Footer from "../components/auth/footer";
-import BackgroundImage from "../../../public/photos/main-background.jpeg";
+import BackgroundDay from "../../../public/photos/main-background.jpeg";
+import BackgroundNight from "../../../public/photos/main-background-night.jpg";
+import { Button } from "react-bootstrap";
+import { useState } from "react";
 
 const MainLayout = ({ children }) => {
+  const [mode, setMode] = useState('night');
+
+  const images = {
+    background_day: BackgroundDay.src,
+    background_night: BackgroundNight.src,
+  };
+  const switchMode = () => {
+    setMode(prevMode => prevMode === 'night' ? 'day' : 'night');
+  }
   return (
     <div
       className="main-layout"
-      style={{ backgroundImage: `url(${BackgroundImage.src})` }}
+      style={{ backgroundImage: `url(${images['background_' + mode]})`, color: `${mode == "day" ? "black" : "white"}`}}
     >
+      <Button onClick={switchMode} className="position-fixed">Switch mode</Button>
       <div className="content">{children}</div>
       <Footer />
     </div>
