@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer">
       <Container className="d-flex justify-content-center align-items-center">
         <Nav className="gap-5">
-          <Link href="/home" passHref>
+          <Link href="/" passHref>
             Home
           </Link>
           <Link href="/about" passHref>
