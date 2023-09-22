@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MainLayout from "./layout";
 import Logo from "../../public/photos/logo.png";
+import SlideShow from "./components/auth/slideshow";
 
 export default function Home() {
   const logoImage = Logo.src;
@@ -21,6 +22,7 @@ export default function Home() {
           </div>
           <div className="title-3"> Welcome...wanderers!</div>
         </div>
+        <SlideShow />
       </MainLayout>
     </>
   );
