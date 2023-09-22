@@ -1,7 +1,9 @@
 import Head from "next/head";
-import MainLayout from "./layout";
+import MainLayout from "@/layout";
 import Logo from "../../public/photos/logo.png";
-import SlideShow from "./components/auth/slideshow";
+import SlideShow from "@/components/auth/slideshow";
+import Auth from "@/components/auth/loginout";
+import Image from "next/image";
 
 export default function Home() {
   const logoImage = Logo.src;
@@ -15,7 +17,7 @@ export default function Home() {
       </Head>
       <MainLayout>
         <div className="text-nowrap title">
-          <img className="logo-img" src={logoImage} width="130" height="130" />
+          <Image className="logo-img" alt="logo" src={logoImage} width={130} height={130} />
           <div className="full-title d-inline">
             <div className="d-inline title-one">UKeight</div>&nbsp;&nbsp;
             <div className="title-two d-inline">Studio</div>
@@ -23,6 +25,7 @@ export default function Home() {
           <div className="title-3"> Welcome...wanderers!</div>
         </div>
         <SlideShow />
+        <Auth />
       </MainLayout>
     </>
   );

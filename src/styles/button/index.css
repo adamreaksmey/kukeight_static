@@ -1,5 +1,46 @@
-button {
-  background-color: transparent !important;
-  border: 1px solid black !important;
-  color: rgb(226, 207, 207) !important;
+:root {
+  --primary-color: #36a527;
+  --secondary-color: #89902c;
+  --box-shadow-color: rgb(36 20 20 / 90%);
+}
+
+.auth-action {
+  position: relative;
+  left: 52vw;
+  top: 22vw;
+  gap: 10px;
+}
+
+.auth-action button {
+  border: none !important;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.auth-action .btn1 {
+  box-shadow: -0.5vw 0.7vw 4px var(--box-shadow-color);
+  background: var(--primary-color);
+  height: 2.5vw;
+}
+
+.auth-action .btn1:hover {
+  transform: scale(1.1);
+  background: darkgray;
+}
+
+.auth-action .btn2 {
+  box-shadow: 0.5vw 0.7vw 4px var(--box-shadow-color);
+  background: var(--secondary-color);
+  height: 2.5vw;
+}
+
+.auth-action .btn2:hover {
+  transform: scale(1.1);
+  background: darkgray;
+}
+
+button.mode-switcher {
+  background-color: transparent;
+  border: 1px solid black;
+  color: rgb(226, 207, 207);
 }

@@ -1,6 +1,6 @@
-import Footer from "../components/auth/footer";
-import BackgroundDay from "../../../public/photos/main-background.jpeg";
-import BackgroundNight from "../../../public/photos/main-background-night.jpg";
+import Footer from "@/components/auth/footer";
+import BackgroundDay from "@/public/photos/main-background.jpeg";
+import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ const MainLayout = ({ children }) => {
       className="main-layout"
       style={{ backgroundImage: `url(${images['background_' + mode]})`, color: `${mode == "day" ? "black" : "white"}`}}
     >
-      <Button onClick={switchMode} className="position-fixed">Switch mode</Button>
+      <Button onClick={switchMode} className="position-fixed mode-switcher">Switch mode</Button>
       <div className="content">{children}</div>
       <Footer />
     </div>
