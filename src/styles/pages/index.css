@@ -1,0 +1,11 @@
+.signup-logo {
+  width: 35% !important;
+  background-color: #fdf5e642;
+  height: 100vh;
+}
+
+.signup-col {
+  position: relative;
+  top: 29vh;
+  left: 8vw;
+}
