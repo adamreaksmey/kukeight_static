@@ -1,7 +1,8 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import Logo from "@/public/photos/logo.png";
 import Image from "next/image";
+import Quotes from "@/components/quotes";
 
 export default function Signup() {
   const [form, setForm] = useState({
@@ -14,9 +15,15 @@ export default function Signup() {
     language: "",
     user_type: "",
   });
+  const [quotes, setQuotes] = useState();
+
+  useEffect(() => {
+    if (Quotes){
+      setQuotes(Quotes)
+    }
+  }, [])
 
   const logoImage = Logo.src;
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,9 +44,18 @@ export default function Signup() {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col xs={6} sm={3} className="signup-logo">
-            <Image src={logoImage} alt="image" width={500} height={500}/>
+            <Image src={logoImage} alt="image" width={500} height={500} />
+            <div className="text-center">
+              <div className="full-title d-inline mb-3">
+                <div className="d-inline title-one">KUKeight</div>&nbsp;&nbsp;
+                <div className="title-two d-inline">Studio</div>
+              </div>
+              <p style={{ transform: 'translateY(1vw)'}}>Read, Write, Immerse!</p>
+              <hr />
+              <pre className="signup-quotes" dangerouslySetInnerHTML={{ __html: quotes }} />
+            </div>
           </Col>
-          
+
           <Col xs={6} sm={3} className="signup-col">
             <Form.Group controlId="email">
               <Form.Label>Email:</Form.Label>
@@ -145,7 +161,6 @@ export default function Signup() {
               />
             </Form.Group>
           </Col>
-          
         </Row>
       </Form>
     </>
