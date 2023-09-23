@@ -2,11 +2,28 @@ import React from "react";
 import { useState } from "react";
 import BasicModal from "@/components/modal";
 import Login from "@/components/modal/auth/login";
+import Signup from "@/components/modal/auth/signup";
 
 export default function Auth() {
   const [showModal, setShowModal] = useState(false);
+  const [component, setComponent] = useState({
+    component: null,
+    title: null,
+  });
 
-  const handleModalOpen = () => {
+  const handleModalOpen = (method) => {
+    if (method == "sign-up") {
+      setComponent({
+        component: <Signup />,
+        title: "Sign-up",
+      });
+    }
+    if (method == "log-in") {
+      setComponent({
+        component: <Login />,
+        title: "Log-in",
+      });
+    }
     setShowModal(true);
   };
 
@@ -14,24 +31,31 @@ export default function Auth() {
     setShowModal(false);
   };
 
-  const helloWorld = () => {
-    console.log("hello world");
-  };
-
   return (
     <>
       <div className="d-flex auth-action">
-        <button className="btn1" onClick={handleModalOpen}>
+        <button
+          className="btn1"
+          onClick={() => {
+            handleModalOpen("sign-up");
+          }}
+        >
           Sign up
         </button>
-        <button className="btn2">Log in</button>
+        <button
+          className="btn2"
+          onClick={() => {
+            handleModalOpen("log-in");
+          }}
+        >
+          Log in
+        </button>
       </div>
       <BasicModal
         handleModalClose={handleModalClose}
-        helloWorld={helloWorld}
         showModal={showModal}
-        title={"Log in"}
-        body={<Login />}
+        title={component.title}
+        body={component.component}
       />
     </>
   );

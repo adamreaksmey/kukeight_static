@@ -15,7 +15,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission logic here
+    // Form submission
     console.log("Form submitted!");
     console.log("Email:", email);
     console.log("Password:", password);
