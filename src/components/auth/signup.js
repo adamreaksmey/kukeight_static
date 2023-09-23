@@ -3,6 +3,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import Logo from "@/public/photos/logo.png";
 import Image from "next/image";
 import Quotes from "@/components/quotes";
+import { useRouter } from "next/router";
 
 export default function Signup() {
   const [form, setForm] = useState({
@@ -16,12 +17,13 @@ export default function Signup() {
     user_type: "",
   });
   const [quotes, setQuotes] = useState();
+  const router = useRouter();
 
   useEffect(() => {
-    if (Quotes){
-      setQuotes(Quotes)
+    if (Quotes) {
+      setQuotes(Quotes);
     }
-  }, [])
+  }, []);
 
   const logoImage = Logo.src;
 
@@ -44,15 +46,43 @@ export default function Signup() {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col xs={6} sm={3} className="signup-logo">
-            <Image src={logoImage} alt="image" width={500} height={500} />
+            <Image
+              src={logoImage}
+              alt="image"
+              width={500}
+              height={500}
+              style={{ filter: "drop-shadow(21px 20px 8px black)" }}
+            />
             <div className="text-center">
               <div className="full-title d-inline mb-3">
-                <div className="d-inline title-one">KUKeight</div>&nbsp;&nbsp;
-                <div className="title-two d-inline">Studio</div>
+                <div
+                  className="d-inline title-one"
+                  style={{ color: "#78D6C6" }}
+                >
+                  KUKeight
+                </div>
+                &nbsp;&nbsp;
+                <div
+                  className="title-two d-inline"
+                  style={{ color: "#F5FCCD" }}
+                >
+                  Studio
+                </div>
               </div>
-              <p style={{ transform: 'translateY(1vw)'}}>Read, Write, Immerse!</p>
+              <p
+                style={{
+                  transform: "translateY(1vw)",
+                  color: "black",
+                  fontWeight: "bold",
+                }}
+              >
+                Read, Write, Immerse!
+              </p>
               <hr />
-              <pre className="signup-quotes" dangerouslySetInnerHTML={{ __html: quotes }} />
+              <pre
+                className="signup-quotes"
+                dangerouslySetInnerHTML={{ __html: quotes }}
+              />
             </div>
           </Col>
 
@@ -67,7 +97,6 @@ export default function Signup() {
                 required
               />
             </Form.Group>
-
             <Form.Group controlId="username">
               <Form.Label>Username: (Unique, Globally displayed)</Form.Label>
               <Form.Control
@@ -78,7 +107,6 @@ export default function Signup() {
                 required
               />
             </Form.Group>
-
             <Form.Group controlId="age">
               <Form.Label>Age:</Form.Label>
               <Form.Control
@@ -89,7 +117,6 @@ export default function Signup() {
                 required
               />
             </Form.Group>
-
             <Form.Group controlId="country">
               <Form.Label>Country:</Form.Label>
               <Form.Control
@@ -103,6 +130,15 @@ export default function Signup() {
             <br />
             <Button variant="primary" type="submit">
               Submit
+            </Button>{" "}
+            <Button
+              variant="secondary"
+              type="button"
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              Back
             </Button>
           </Col>
 
