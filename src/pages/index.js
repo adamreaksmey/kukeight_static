@@ -17,7 +17,13 @@ export default function Home() {
       </Head>
       <MainLayout>
         <div className="text-nowrap title">
-          <Image className="logo-img" alt="logo" src={logoImage} width={130} height={130} />
+          <Image
+            className="logo-img"
+            alt="logo"
+            src={logoImage}
+            width={130}
+            height={130}
+          />
           <div className="full-title d-inline">
             <div className="d-inline title-one">UKeight</div>&nbsp;&nbsp;
             <div className="title-two d-inline">Studio</div>

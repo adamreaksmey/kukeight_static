@@ -20,7 +20,7 @@ export default function Login() {
     console.log("Email:", email);
     console.log("Password:", password);
   };
-  
+
   return (
     <>
       <Form onSubmit={handleSubmit}>
