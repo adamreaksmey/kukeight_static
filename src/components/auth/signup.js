@@ -83,6 +83,7 @@ export default function Signup() {
         </Col>
 
         <Col xs={3} sm={5} className="signup-col">
+          <div className="text-center">SIGN UP TEST</div>
           <Form onSubmit={handleSubmit} className="d-flex w-100 gap-5">
             <div className="w-50">
               <Form.Group controlId="email">
