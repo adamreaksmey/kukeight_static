@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Auth from "@/components/auth/loginout";
 
 export default function SlideShow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,7 @@ export default function SlideShow() {
   return (
     <>
       <div className="description text-left">
-        <div style={{ paddingBottom: "5vw" }}>
+        <div style={{ paddingBottom: "5rem" }}>
           <div>Unleash Your Imagination:</div>
           <div
             className="dis-inline"
@@ -32,10 +33,11 @@ export default function SlideShow() {
           </div>
         </div>
 
-        <div id="draggable-element">
+        <div id="draggable-element" style={{ paddingBottom: '1em'}}>
           Not a user yet? Well, what are you waiting for? <br />
           Join the Authors, Read and be cool!!
         </div>
+        <Auth />
       </div>
     </>
   );

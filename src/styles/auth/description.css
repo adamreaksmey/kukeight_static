@@ -2,6 +2,7 @@
   position: relative;
   left: 12vw;
   top: 18vw;
+  font-size: 1.1rem !important;
 }
 
 @keyframes slowmo {

@@ -31,7 +31,6 @@ export default function Home() {
           <div className="title-3"> Welcome...wanderers!</div>
         </div>
         <SlideShow />
-        <Auth />
       </MainLayout>
     </>
   );

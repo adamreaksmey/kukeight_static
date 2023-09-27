@@ -6,8 +6,6 @@
 
 .auth-action {
   position: relative;
-  left: 52vw;
-  top: 22vw;
   gap: 10px;
 }
 
@@ -20,7 +18,7 @@
 .auth-action .btn1 {
   box-shadow: -0.5vw 0.7vw 4px var(--box-shadow-color);
   background: var(--primary-color);
-  height: 2.5vw;
+  height: 36px;
 }
 
 .auth-action .btn1:hover {
@@ -31,7 +29,7 @@
 .auth-action .btn2 {
   box-shadow: 0.5vw 0.7vw 4px var(--box-shadow-color);
   background: var(--secondary-color);
-  height: 2.5vw;
+  height: 36px;
 }
 
 .auth-action .btn2:hover {
