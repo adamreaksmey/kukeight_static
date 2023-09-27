@@ -46,13 +46,16 @@ export default function Signup() {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col xs={6} sm={3} className="signup-logo">
-            <Image
-              src={logoImage}
-              alt="image"
-              width={500}
-              height={500}
-              style={{ filter: "drop-shadow(21px 20px 8px black)" }}
-            />
+            <div className="w-100 text-center">
+              <Image
+                src={logoImage}
+                alt="image"
+                width={500}
+                height={500}
+                style={{ filter: "drop-shadow(21px 20px 8px black)" }}
+              />
+            </div>
+
             <div className="text-center">
               <div className="full-title d-inline mb-3">
                 <div
@@ -75,6 +78,7 @@ export default function Signup() {
                   color: "black",
                   fontWeight: "bold",
                 }}
+                className="pb-3"
               >
                 Read, Write, Immerse!
               </p>
