@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Auth from "@/components/auth/loginout";
+import Title from "@/components/auth/title";
 
 export default function SlideShow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,6 +24,7 @@ export default function SlideShow() {
   return (
     <>
       <div className="description text-left">
+        <Title />
         <div style={{ paddingBottom: "5rem" }}>
           <div>Unleash Your Imagination:</div>
           <div
@@ -33,7 +35,7 @@ export default function SlideShow() {
           </div>
         </div>
 
-        <div id="draggable-element" style={{ paddingBottom: '1em'}}>
+        <div id="draggable-element" style={{ paddingBottom: "1em" }}>
           Not a user yet? Well, what are you waiting for? <br />
           Join the Authors, Read and be cool!!
         </div>

@@ -23,10 +23,6 @@ body {
 
 .title {
   font-weight: bold;
-  position: fixed;
-  left: 71%;
-  top: 13%;
-  transform: translate(-47%, -13%);
 }
 
 .title-one {
