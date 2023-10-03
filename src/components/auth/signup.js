@@ -34,7 +34,6 @@ export default function Signup() {
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
-    console.log({ name: name, value: value });
     setForm((prevFormData) => ({
       ...prevFormData,
       [name]: value,

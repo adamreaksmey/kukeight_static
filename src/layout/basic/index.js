@@ -11,6 +11,7 @@ export const BasicLayout = ({ children }) => {
         backgroundImage: `url(${bookshelfsImage})`,
         color: "white",
         fontWeight: "bold",
+        padding: "0px"
       }}
     >
       {children}

@@ -15,19 +15,21 @@ const MainLayout = ({ children }) => {
     setMode((prevMode) => (prevMode === "night" ? "day" : "night"));
   };
   return (
-    <div
-      className="main-layout"
-      style={{
-        backgroundImage: `url(${images["background_" + mode]})`,
-        color: `${mode == "day" ? "black" : "white"}`,
-      }}
-    >
+    <>
       <Button onClick={switchMode} className="position-fixed mode-switcher">
         Switch mode
       </Button>
-      <div className="content">{children}</div>
-      <Footer />
-    </div>
+      <div
+        className="main-layout"
+        style={{
+          backgroundImage: `url(${images["background_" + mode]})`,
+          color: `${mode == "day" ? "black" : "white"}`,
+        }}
+      >
+        <div className="content">{children}</div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

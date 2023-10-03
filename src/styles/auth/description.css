@@ -1,8 +1,9 @@
 .description {
   position: relative;
-  left: 12vw;
-  top: 18vw;
+  top: 5vw;
   font-size: 1.1rem !important;
+  /* background-color: #f5deb382; */
+  width: 31%;
 }
 
 @keyframes slowmo {
