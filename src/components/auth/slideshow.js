@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Auth from "@/components/auth/loginout";
 import Title from "@/components/auth/title";
 import { Row, Col } from "react-bootstrap";
+import Books from "@/public/photos/pngwing.com.png"
+import Image from "next/image";
 
 export default function SlideShow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,10 +24,12 @@ export default function SlideShow() {
     "Discover The World Of Novels Written By You!",
   ];
 
+  const bookImage = Books.src;
+
   return (
     <>
       <Row className="d-flex">
-        <Col className="description text-left" style={{ marginLeft: 'auto'}}>
+        <Col className="description text-left" flex={1} style={{ marginLeft: 'auto'}}>
           <Title />
           <hr className="w-50"/>
           <div style={{ paddingBottom: "5rem" }}>
@@ -44,7 +48,15 @@ export default function SlideShow() {
           </div>
           <Auth />
         </Col>
-        <Col className="description text-right">Hey</Col>
+        <Col className="description" flex={1}>
+          <Image  
+            src={bookImage}
+            width={130}
+            height={130}
+            className="logo-img"
+            alt="logo"
+          />
+        </Col>
       </Row>
     </>
   );
