@@ -1,11 +1,13 @@
 import Head from "next/head";
 import MainLayout from "../layout";
-import SlideShow from "@/components/top/slideshow.js";
-import Icons from "@/components/top/icons";
-import ImageTest from "@/public/photos/topicons/icon1.png";
+import SlideShow from "@/components/top/section1/slideshow.js";
+import Icons from "@/components/top/section1/icons";
 import Image from "next/image";
+import Books from "@/public/photos/pngwing.com.png";
+import TopBookshelfs from "@/public/photos/top/top-pic-bookshelfs.png";
 
 export default function Home() {
+  const bookImage = Books.src;
   return (
     <>
       <Head>
@@ -40,7 +42,7 @@ export default function Home() {
           </div>
           <div className="w-100 d-flex justify-content-end">
             <Image
-              src={ImageTest.src}
+              src={TopBookshelfs.src}
               width={330}
               height={330}
               className="logo-img"
@@ -48,6 +50,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <h2>What is this? what do we do?</h2>
       </MainLayout>
     </>
   );

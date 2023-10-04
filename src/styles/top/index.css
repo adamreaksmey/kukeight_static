@@ -12,6 +12,11 @@ body {
   font-family: "Ubuntu", sans-serif !important;
 }
 
+.content {
+  height: 90vh !important;
+  overflow: scroll;
+}
+
 .main-layout {
   background-size: cover;
   background-position: center;

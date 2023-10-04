@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Auth from "@/components/top/loginout";
-import Title from "@/components/top/title";
+import Auth from "@/components/top/section1/loginout";
+import Title from "@/components/top/section1/title";
 import { Row, Col } from "react-bootstrap";
 import Books from "@/public/photos/pngwing.com.png";
 import Books2 from "@/public/photos/book2.png";
