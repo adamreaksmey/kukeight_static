@@ -1,20 +1,9 @@
 import Head from "next/head";
 import MainLayout from "../layout";
-import Logo from "../../public/photos/logo.png";
 import SlideShow from "@/components/top/slideshow.js";
-import Image from "next/image";
-import Icon1 from "@/public/photos/topicons/icon1.png";
-import Icon2 from "@/public/photos/topicons/icon2.png";
-import Icon3 from "@/public/photos/topicons/icon3.png";
-import { Col, Row } from "react-bootstrap";
+import Icons from "@/components/top/icons";
 
 export default function Home() {
-  const logoImage = Logo.src;
-  const icons = {
-    img1: Icon1.src,
-    img2: Icon2.src,
-    img3: Icon3.src,
-  };
   return (
     <>
       <Head>
@@ -25,45 +14,25 @@ export default function Home() {
       </Head>
       <MainLayout>
         <SlideShow />
-        {/* <hr className="d-none"/> */}
-        <div className="text-center">
-          <Row>
-            <Col
-              className="d-flex justify-content-center"
-              style={{ gap: "10%" }}
-            >
-              <div>
-                <Image
-                  src={icons.img1}
-                  width={180}
-                  height={90}
-                  className="logo-img"
-                  alt="logo"
-                />
-                <div>" Read "</div>
-              </div>
-              <div>
-                <Image
-                  src={icons.img2}
-                  width={90}
-                  height={90}
-                  className="logo-img"
-                  alt="logo"
-                />
-                <div>" Write "</div>
-              </div>
-              <div>
-                <Image
-                  src={icons.img3}
-                  width={180}
-                  height={90}
-                  className="logo-img"
-                  alt="logo"
-                />
-                <div>" Immerse "</div>
-              </div>
-            </Col>
-          </Row>
+        <div className="text-center pb-5">
+          <Icons />
+        </div>
+        <div className="w-100 top-2" style={{ backgroundColor: "rgb(24 111 101 / 56%)"}}>
+          <div className="w-50">
+            <h2>What is this? what do we do?</h2>
+            <hr />
+            <div>
+              KUKEight is a groundbreaking Cambodian web application that allows
+              young, talented creators around the world to develop their
+              storytelling abilities. Through an intuitive interface and robust
+              set of creative tools, KUKEight enables users to translate their
+              imaginative stories into captivating novels and movies. By
+              fostering global collaboration on diverse narratives, the platform
+              sparks creativity and imagination while cultivating important
+              literary and filmmaking skills in the next generation of
+              storytellers.
+            </div>
+          </div>
         </div>
       </MainLayout>
     </>

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 body {
-  /* background-image: url("../../../public/photos/main-background.jpeg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -58,6 +57,10 @@ body {
 .logo-img:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+}
+
+.top-2 {
+  padding: 10px;
 }
 
 @import url("./footer.css");
