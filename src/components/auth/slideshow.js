@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Auth from "@/components/auth/loginout";
 import Title from "@/components/auth/title";
 import { Row, Col } from "react-bootstrap";
-import Books from "@/public/photos/pngwing.com.png"
+import Books from "@/public/photos/pngwing.com.png";
+import Books2 from "@/public/photos/book2.png";
 import Image from "next/image";
 
 export default function SlideShow() {
@@ -25,13 +26,18 @@ export default function SlideShow() {
   ];
 
   const bookImage = Books.src;
+  const bookImage2 = Books2.src;
 
   return (
     <>
       <Row className="d-flex">
-        <Col className="description text-left" flex={1} style={{ marginLeft: 'auto'}}>
+        <Col
+          className="description text-left"
+          flex={1}
+          style={{ marginLeft: "auto" }}
+        >
           <Title />
-          <hr className="w-50"/>
+          <hr className="w-50" />
           <div style={{ paddingBottom: "5rem" }}>
             <div>Unleash Your Imagination:</div>
             <div
@@ -48,14 +54,16 @@ export default function SlideShow() {
           </div>
           <Auth />
         </Col>
-        <Col className="description" flex={1}>
-          <Image  
-            src={bookImage}
-            width={130}
-            height={130}
-            className="logo-img"
-            alt="logo"
-          />
+        <Col className="description pt-5" flex={1}>
+          <div style={{ float: "right" }}>
+            <Image
+              src={bookImage}
+              width={330}
+              height={330}
+              className="logo-img"
+              alt="logo"
+            />
+          </div>
         </Col>
       </Row>
     </>
