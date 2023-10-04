@@ -3,6 +3,7 @@ import BackgroundDay from "@/public/photos/main-background.jpeg";
 import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
+import React from "react";
 
 const MainLayout = ({ children }) => {
   const [mode, setMode] = useState("night");
@@ -11,9 +12,15 @@ const MainLayout = ({ children }) => {
     background_day: BackgroundDay.src,
     background_night: BackgroundNight.src,
   };
+
   const switchMode = () => {
     setMode((prevMode) => (prevMode === "night" ? "day" : "night"));
   };
+
+  const ChildComponent = React.Children.map(children, (child) => {
+    return React.cloneElement(child, { mode });
+  });
+
   return (
     <>
       <Button onClick={switchMode} className="position-fixed mode-switcher">
@@ -26,7 +33,7 @@ const MainLayout = ({ children }) => {
           color: `${mode == "day" ? "black" : "white"}`,
         }}
       >
-        <div className="content">{children}</div>
+        <div className="content">{ChildComponent}</div>
         <Footer />
       </div>
     </>

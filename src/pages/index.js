@@ -2,12 +2,9 @@ import Head from "next/head";
 import MainLayout from "../layout";
 import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
-import Image from "next/image";
-import Books from "@/public/photos/pngwing.com.png";
-import TopBookshelfs from "@/public/photos/top/top-pic-bookshelfs.png";
+import Section2 from "@/components/top/section2";
 
 export default function Home() {
-  const bookImage = Books.src;
   return (
     <>
       <Head>
@@ -25,32 +22,11 @@ export default function Home() {
           className="w-100 top-2 d-flex"
           style={{ backgroundColor: "rgb(24 111 101 / 56%)" }}
         >
-          <div className="w-100">
-            <h2>What is this? what do we do?</h2>
-            <hr />
-            <div>
-              KUKEight is a groundbreaking Cambodian web application that allows
-              young, talented creators around the world to develop their
-              storytelling abilities. Through an intuitive interface and robust
-              set of creative tools, KUKEight enables users to translate their
-              imaginative stories into captivating novels and movies. By
-              fostering global collaboration on diverse narratives, the platform
-              sparks creativity and imagination while cultivating important
-              literary and filmmaking skills in the next generation of
-              storytellers.
-            </div>
-          </div>
-          <div className="w-100 d-flex justify-content-end">
-            <Image
-              src={TopBookshelfs.src}
-              width={330}
-              height={330}
-              className="logo-img"
-              alt="logo"
-            />
-          </div>
+          <Section2 />
         </div>
-        <h2>What is this? what do we do?</h2>
+        <div className="w-100 top-2 d-flex">
+          <h2>What makes us different?</h2>
+        </div>
       </MainLayout>
     </>
   );
