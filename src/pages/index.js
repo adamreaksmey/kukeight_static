@@ -3,6 +3,7 @@ import MainLayout from "../layout";
 import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
+import React from "react";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
           className="w-100 top-2 d-flex"
           style={{ backgroundColor: "rgb(24 111 101 / 56%)" }}
         >
-          <Section2 />
+          {React.cloneElement(<Section2 />, { mode: "night" })}
         </div>
         <div className="w-100 top-2 d-flex">
           <h2>What makes us different?</h2>

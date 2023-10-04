@@ -8,13 +8,13 @@ body {
   background-color: black !important;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
   font-family: "Ubuntu", sans-serif !important;
 }
 
 .content {
   height: 90vh !important;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .main-layout {
