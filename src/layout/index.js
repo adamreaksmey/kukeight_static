@@ -1,4 +1,4 @@
-import Footer from "@/components/auth/footer";
+import Footer from "@/components/top/footer.js";
 import BackgroundDay from "@/public/photos/main-background.jpeg";
 import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { Button } from "react-bootstrap";

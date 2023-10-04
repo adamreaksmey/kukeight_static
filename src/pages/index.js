@@ -1,12 +1,20 @@
 import Head from "next/head";
 import MainLayout from "../layout";
 import Logo from "../../public/photos/logo.png";
-import SlideShow from "@/components/auth/slideshow";
-import Auth from "@/components/auth/loginout";
+import SlideShow from "@/components/top/slideshow.js";
 import Image from "next/image";
+import Icon1 from "@/public/photos/topicons/icon1.png";
+import Icon2 from "@/public/photos/topicons/icon2.png";
+import Icon3 from "@/public/photos/topicons/icon3.png";
+import { Col, Row } from "react-bootstrap";
 
 export default function Home() {
   const logoImage = Logo.src;
+  const icons = {
+    img1: Icon1.src,
+    img2: Icon2.src,
+    img3: Icon3.src,
+  };
   return (
     <>
       <Head>
@@ -17,7 +25,46 @@ export default function Home() {
       </Head>
       <MainLayout>
         <SlideShow />
-        <div className="text-center">Hello world</div>
+        {/* <hr className="d-none"/> */}
+        <div className="text-center">
+          <Row>
+            <Col
+              className="d-flex justify-content-center"
+              style={{ gap: "10%" }}
+            >
+              <div>
+                <Image
+                  src={icons.img1}
+                  width={180}
+                  height={90}
+                  className="logo-img"
+                  alt="logo"
+                />
+                <div>" Read "</div>
+              </div>
+              <div>
+                <Image
+                  src={icons.img2}
+                  width={90}
+                  height={90}
+                  className="logo-img"
+                  alt="logo"
+                />
+                <div>" Write "</div>
+              </div>
+              <div>
+                <Image
+                  src={icons.img3}
+                  width={180}
+                  height={90}
+                  className="logo-img"
+                  alt="logo"
+                />
+                <div>" Immerse "</div>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </MainLayout>
     </>
   );

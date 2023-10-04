@@ -1,6 +1,6 @@
 import { BasicLayout } from "@/layout/basic";
 import React, { use, useState } from "react";
-import Signup from "@/components/auth/signup";
+import Signup from "@/components/top/signup";
 import { Form, Button, Row, Col } from "react-bootstrap";
 
 export default function SignupPage() {
