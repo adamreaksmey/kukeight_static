@@ -2,6 +2,8 @@ import Head from "next/head";
 import MainLayout from "../layout";
 import SlideShow from "@/components/top/slideshow.js";
 import Icons from "@/components/top/icons";
+import ImageTest from "@/public/photos/topicons/icon1.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,8 +19,11 @@ export default function Home() {
         <div className="text-center pb-5">
           <Icons />
         </div>
-        <div className="w-100 top-2" style={{ backgroundColor: "rgb(24 111 101 / 56%)"}}>
-          <div className="w-50">
+        <div
+          className="w-100 top-2 d-flex"
+          style={{ backgroundColor: "rgb(24 111 101 / 56%)" }}
+        >
+          <div className="w-100">
             <h2>What is this? what do we do?</h2>
             <hr />
             <div>
@@ -32,6 +37,15 @@ export default function Home() {
               literary and filmmaking skills in the next generation of
               storytellers.
             </div>
+          </div>
+          <div className="w-100 d-flex justify-content-end">
+            <Image
+              src={ImageTest.src}
+              width={330}
+              height={330}
+              className="logo-img"
+              alt="logo"
+            />
           </div>
         </div>
       </MainLayout>
