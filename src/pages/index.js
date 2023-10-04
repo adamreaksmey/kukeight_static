@@ -23,7 +23,7 @@ export default function Home() {
           className="w-100 top-2 d-flex"
           style={{ backgroundColor: "rgb(24 111 101 / 56%)" }}
         >
-          {React.cloneElement(<Section2 />, { mode: "night" })}
+          <Section2 />
         </div>
         <div className="w-100 top-2 d-flex">
           <h2>What makes us different?</h2>

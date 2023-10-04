@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import TopBookshelfs from "@/public/photos/top/top-pic-bookshelfs.png";
 import Image from "next/image";
 
-const Section2 = ({ mode }) => {
-  console.log("Mode in Section2:", mode);
+const Section2 = () => {
 
   return (
     <>

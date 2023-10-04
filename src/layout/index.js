@@ -6,28 +6,26 @@ import { useEffect, useState } from "react";
 import React from "react";
 
 const MainLayout = ({ children }) => {
-  const [mode, setMode] = useState("night");
-  const [localStorageMode, setLocalStorageMode ] = useState("");
+  const [localStorageMode, setLocalStorageMode] = useState("");
+  const [mode, setMode] = useState(localStorageMode);
+
+  useEffect(() => {
+    let value = localStorage.getItem("mode");
+    setLocalStorageMode(value);
+    setMode(value || "night");
+  }, []);
 
   const images = {
     background_day: BackgroundDay.src,
     background_night: BackgroundNight.src,
   };
 
-  useEffect(() => {
-    let value = localStorage.getItem("mode");
-    setLocalStorageMode(value);
-  }, []);
-
   const switchMode = () => {
-    setMode((prevMode) => (prevMode === "night" ? "day" : "night"));
-    localStorage.setItem("mode", mode);
-    setLocalStorageMode(mode);
+    const newMode = mode === "night" ? "day" : "night";
+    setMode(newMode);
+    localStorage.setItem("mode", newMode);
+    setLocalStorageMode(newMode);
   };
-
-  const ChildComponent = React.Children.map(children, (child) => {
-    return React.cloneElement(child, { mode });
-  });
 
   return (
     <>
@@ -41,7 +39,7 @@ const MainLayout = ({ children }) => {
           color: `${localStorageMode == "day" ? "black" : "white"}`,
         }}
       >
-        <div className="content">{ChildComponent}</div>
+        <div className="content">{children}</div>
         <Footer />
       </div>
     </>
