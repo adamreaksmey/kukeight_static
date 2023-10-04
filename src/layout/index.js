@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
         Switch mode
       </Button>
       <div
-        className="main-layout"
+        className="main-layout overflow-scroll"
         style={{
           backgroundImage: `url(${images["background_" + mode]})`,
           color: `${mode == "day" ? "black" : "white"}`,

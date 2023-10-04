@@ -17,6 +17,7 @@ export default function Home() {
       </Head>
       <MainLayout>
         <SlideShow />
+        <div className="text-center">Hello world</div>
       </MainLayout>
     </>
   );
