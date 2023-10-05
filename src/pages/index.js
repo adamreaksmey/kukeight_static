@@ -33,8 +33,10 @@ export default function Home() {
         <Section2 />
       </div>
       <div className="w-100 top-2 d-flex flex-row-reverse">
-        {/* <h2>What makes us different?</h2> */}
         <Section3 />
+      </div>
+      <div className="w-100 top-2 d-flex">
+        
       </div>
     </>
   );
