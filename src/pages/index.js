@@ -4,11 +4,11 @@ import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
 import React, { useContext } from "react";
+import Section3 from "@/components/top/section3";
 
 export default function Home() {
-
   const mode = useContext(LayoutContext);
-  console.log(mode)
+
   return (
     <>
       <Head>
@@ -18,20 +18,24 @@ export default function Home() {
         <link rel="icon" href="./photos/logo.png" />
       </Head>
 
-        <SlideShow />
-        <div className="text-center pb-5">
-          <Icons />
-        </div>
-        <div
-          className="w-100 top-2 d-flex"
-          style={{ backgroundColor: "rgb(24 111 101 / 56%)" }}
-        >
-          <Section2 />
-        </div>
-        <div className="w-100 top-2 d-flex">
-          <h2>What makes us different?</h2>
-        </div>
-
+      <SlideShow />
+      <div className="text-center pb-5">
+        <Icons />
+      </div>
+      <div
+        className="w-100 top-2 d-flex"
+        style={{
+          backgroundColor: `${
+            mode == "night" ? "rgb(24 111 101 / 56%)" : "#dafffb61"
+          }`,
+        }}
+      >
+        <Section2 />
+      </div>
+      <div className="w-100 top-2 d-flex flex-row-reverse">
+        {/* <h2>What makes us different?</h2> */}
+        <Section3 />
+      </div>
     </>
   );
 }
