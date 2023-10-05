@@ -14,3 +14,17 @@
 .logo-img {
   transition: transform 0.3s ease-in-out;
 }
+
+.grid-dark {
+  background: #5b8662d4;
+  padding: 15px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.grid-light {
+  background: #d6cc99c2;
+  padding: 15px;
+  border-radius: 10px;
+  height: 100%;
+}
