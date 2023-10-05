@@ -30,42 +30,48 @@ export default function SlideShow() {
 
   return (
     <>
-      <Row className="d-flex" style={{ height: '60vh', textShadow: "0 0 6px #EAD7BB" }}>
-        <Col
-          className="description text-left"
-          flex={1}
-          style={{ marginLeft: "auto" }}
+      <div>
+        {" "}
+        <Row
+          className="d-flex"
+          style={{ height: "60vh", textShadow: "0 0 6px #EAD7BB" }}
         >
-          <Title />
-          <hr className="w-50" />
-          <div style={{ paddingBottom: "5rem" }}>
-            <div>Unleash Your Imagination:</div>
-            <div
-              className="dis-inline"
-              style={{ animation: "slowmo 3s infinite" }}
-            >
-              {slides[currentSlide]}
+          <Col
+            className="description text-left"
+            flex={1}
+            style={{ marginLeft: "auto" }}
+          >
+            <Title />
+            <hr className="w-50" />
+            <div style={{ paddingBottom: "5rem" }}>
+              <div>Unleash Your Imagination:</div>
+              <div
+                className="dis-inline"
+                style={{ animation: "slowmo 3s infinite" }}
+              >
+                {slides[currentSlide]}
+              </div>
             </div>
-          </div>
 
-          <div id="draggable-element" style={{ paddingBottom: "1em" }}>
-            Not a user yet? Well, what are you waiting for? <br />
-            Join the Authors, Read and be cool!!
-          </div>
-          <Auth />
-        </Col>
-        <Col className="description pt-5" flex={1}>
-          <div style={{ float: "right" }}>
-            <Image
-              src={bookImage}
-              width={330}
-              height={330}
-              className="logo-img"
-              alt="logo"
-            />
-          </div>
-        </Col>
-      </Row>
+            <div id="draggable-element" style={{ paddingBottom: "1em" }}>
+              Not a user yet? Well, what are you waiting for? <br />
+              Join the Authors, Read and be cool!!
+            </div>
+            <Auth />
+          </Col>
+          <Col className="description pt-5" flex={1}>
+            <div style={{ float: "right" }}>
+              <Image
+                src={bookImage}
+                width={330}
+                height={330}
+                className="logo-img"
+                alt="logo"
+              />
+            </div>
+          </Col>
+        </Row>
+      </div>
     </>
   );
 }

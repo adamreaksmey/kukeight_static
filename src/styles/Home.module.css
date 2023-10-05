@@ -9,7 +9,12 @@
 
 .content {
   height: 90vh !important;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.highlighted {
+  background-color: #EAD7BB;
 }
 
 .description {
