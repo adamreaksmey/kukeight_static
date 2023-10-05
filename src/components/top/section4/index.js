@@ -9,7 +9,7 @@ const Section4 = () => {
           But why us? Why choose to write with us? and on us?
         </h2>
       </div>
-      <Row>
+      <Row className="text-center">
         <Col>
           <div>Hello world</div>
           <div>Hello world</div>
