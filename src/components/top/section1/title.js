@@ -6,7 +6,7 @@ const Title = () => {
   const logoImage = Logo.src;
   return (
     <>
-      <div className="text-nowrap title">
+      <div className="text-nowrap title glow">
         <Image
           className="logo-img"
           alt="logo"

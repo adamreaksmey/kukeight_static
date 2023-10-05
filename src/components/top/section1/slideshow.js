@@ -30,7 +30,7 @@ export default function SlideShow() {
 
   return (
     <>
-      <Row className="d-flex" style={{ height: '60vh' }}>
+      <Row className="d-flex" style={{ height: '60vh', textShadow: "0 0 6px #EAD7BB" }}>
         <Col
           className="description text-left"
           flex={1}

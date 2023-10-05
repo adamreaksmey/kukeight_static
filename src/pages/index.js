@@ -5,6 +5,7 @@ import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
 import React, { useContext } from "react";
 import Section3 from "@/components/top/section3";
+import Section4 from "@/components/top/section4";
 
 export default function Home() {
   const mode = useContext(LayoutContext);
@@ -35,8 +36,9 @@ export default function Home() {
       <div className="w-100 top-2 d-flex flex-row-reverse">
         <Section3 />
       </div>
-      <div className="w-100 top-2 d-flex">
-        
+      <hr />
+      <div className="w-100 top-2">
+        <Section4 />
       </div>
     </>
   );
