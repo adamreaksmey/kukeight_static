@@ -7,7 +7,7 @@ const Section2 = (props) => {
   return (
     <>
       <div className="w-100">
-        <h2 className="fw-bold">What is this? what do we do?</h2>
+        <h2 className="fw-bold text-decoration-underline">What is this? what do we do?</h2>
         <hr />
         <div>
           KUKEight is a groundbreaking Cambodian web application that allows

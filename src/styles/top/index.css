@@ -73,6 +73,10 @@ body {
   text-shadow: 0 0 6px #EAD7BB;
 }
 
+.white {
+  color: white;
+}
+
 @import url("./footer.css");
 @import url("./description.css");
 @import url("./quotes.css");

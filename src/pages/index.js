@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <SlideShow />
-      <div className="text-center pb-5">
+      <div className="text-center pb-5 icon-components">
         <Icons />
       </div>
       <div

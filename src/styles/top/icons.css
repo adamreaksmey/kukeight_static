@@ -1,3 +1,16 @@
 .icons .text {
-    text-shadow: 0 0 6px #49ff7a;
+  text-shadow: 0 0 6px #49ff7a;
+}
+
+.icon-components {
+  position: relative;
+  z-index: 1;
+}
+
+.icons div:hover .logo-img {
+  transform: scale(1.1);
+}
+
+.logo-img {
+  transition: transform 0.3s ease-in-out;
 }

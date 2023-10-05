@@ -8,7 +8,7 @@ const Section4 = () => {
   return (
     <>
       <div className="w-100 text-center pb-5">
-        <h2 className="glow">
+        <h2 className="fw-bold text-decoration-underline white">
           But why us? Why choose to write with us? and on us?
         </h2>
       </div>

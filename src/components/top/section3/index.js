@@ -6,7 +6,7 @@ const Section3 = () => {
   return (
     <>
       <div className="w-100 text-end" style={{ color: "white" }}>
-        <h2 className="text-right">What makes us different?</h2>
+        <h2 className="text-right text-decoration-underline">What makes us different?</h2>
         <hr />
         <div>
             We have seen many websites that offer you the ability to read

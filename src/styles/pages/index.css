@@ -9,3 +9,7 @@
   top: 29vh;
   left: 8vw;
 }
+
+.highlighted {
+  background-color: #EAD7BB;
+}
