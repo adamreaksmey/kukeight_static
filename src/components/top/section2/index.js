@@ -3,22 +3,6 @@ import TopBookshelfs from "@/public/photos/top/top-pic-bookshelfs.png";
 import Image from "next/image";
 
 const Section2 = () => {
-  useEffect(() => {
-    const handleStorageChange = (event) => {
-      if (event.storageArea === localStorage && event.key === "mode") {
-        // Handle changes for the "mode" key in localStorage here
-        console.log("The 'mode' key in localStorage has changed");
-      }
-    };
-
-    // Attach the event listener when the component mounts
-    window.addEventListener("storage", handleStorageChange);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
   return (
     <>
       <div className="w-100">

@@ -2,9 +2,10 @@ import Footer from "@/components/top/section1/footer.js";
 import BackgroundDay from "@/public/photos/main-background.jpeg";
 import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { Button } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import React from "react";
 
+const LayoutContext = createContext();
 const MainLayout = ({ children }) => {
   const [localStorageMode, setLocalStorageMode] = useState("");
   const [mode, setMode] = useState(localStorageMode);
@@ -28,7 +29,7 @@ const MainLayout = ({ children }) => {
   };
 
   return (
-    <>
+    <LayoutContext.Provider value={mode}>
       <Button onClick={switchMode} className="position-fixed mode-switcher">
         Switch mode
       </Button>
@@ -42,8 +43,8 @@ const MainLayout = ({ children }) => {
         <div className="content">{children}</div>
         <Footer />
       </div>
-    </>
+    </LayoutContext.Provider>
   );
 };
 
-export default MainLayout;
+export { LayoutContext, MainLayout };

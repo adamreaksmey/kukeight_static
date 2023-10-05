@@ -1,6 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
 
-const LocalStorage = () => {
+const LocalStorage = (key) => {
   useEffect(() => {
     const handleStorageChange = (event) => {
       if (event.key === key) {

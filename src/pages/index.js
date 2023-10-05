@@ -1,11 +1,14 @@
 import Head from "next/head";
-import MainLayout from "../layout";
+import { MainLayout, LayoutContext } from "../layout";
 import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
-import React from "react";
+import React, { useContext } from "react";
 
 export default function Home() {
+
+  const mode = useContext(LayoutContext);
+  console.log(mode)
   return (
     <>
       <Head>
@@ -14,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./photos/logo.png" />
       </Head>
-      <MainLayout>
+
         <SlideShow />
         <div className="text-center pb-5">
           <Icons />
@@ -28,7 +31,7 @@ export default function Home() {
         <div className="w-100 top-2 d-flex">
           <h2>What makes us different?</h2>
         </div>
-      </MainLayout>
+
     </>
   );
 }
