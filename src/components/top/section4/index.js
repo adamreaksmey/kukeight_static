@@ -12,8 +12,6 @@ const Section4 = () => {
       <Row className="text-center">
         <Col>
           <div>Hello world</div>
-          <div>Hello world</div>
-          <div>Hello world</div>
         </Col>
         <Col>
           <div>Hello world</div>
