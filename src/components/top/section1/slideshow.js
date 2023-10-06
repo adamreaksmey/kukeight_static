@@ -3,7 +3,6 @@ import Auth from "@/components/top/section1/loginout";
 import Title from "@/components/top/section1/title";
 import { Row, Col } from "react-bootstrap";
 import Books from "@/public/photos/pngwing.com.png";
-import Books2 from "@/public/photos/book2.png";
 import Image from "next/image";
 
 export default function SlideShow() {
@@ -26,7 +25,6 @@ export default function SlideShow() {
   ];
 
   const bookImage = Books.src;
-  const bookImage2 = Books2.src;
 
   return (
     <>

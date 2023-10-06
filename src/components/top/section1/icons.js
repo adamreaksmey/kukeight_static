@@ -14,7 +14,10 @@ const Icons = () => {
   return (
     <>
       <Row>
-        <Col className="d-flex justify-content-center icons" style={{ gap: "10%" }}>
+        <Col
+          className="d-flex justify-content-center icons"
+          style={{ gap: "10%" }}
+        >
           <div>
             <Image
               src={icons.img1}
@@ -23,7 +26,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">" Read "</div>
+            <div className="fw-bold text">&quot; Read &quot;</div>
           </div>
           <div>
             <Image
@@ -33,7 +36,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">" Write "</div>
+            <div className="fw-bold text">&quot; Write &quot;</div>
           </div>
           <div>
             <Image
@@ -43,7 +46,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">" Immerse "</div>
+            <div className="fw-bold text">&quot; Immerse &quot;</div>
           </div>
         </Col>
       </Row>
