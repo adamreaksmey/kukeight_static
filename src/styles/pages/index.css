@@ -11,7 +11,11 @@
 }
 
 .highlighted {
-  background-color: #EAD7BB;
+  background-color: #ead7bb;
+}
+
+.skin {
+  color: #F5E8B7;
 }
 
 @import url("./layout/index.css");
