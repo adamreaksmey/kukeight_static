@@ -1,0 +1,10 @@
+.top-bar {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-bar.show {
+  opacity: 1;
+  pointer-events: auto;
+}

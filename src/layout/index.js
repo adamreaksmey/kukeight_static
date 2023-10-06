@@ -49,7 +49,9 @@ const MainLayout = ({ children }) => {
 
   return (
     <>
-      {showTopBar && <TopBar switchMode={switchMode} />}
+      <div className={`top-bar ${showTopBar ? "show" : ""}`}>
+        <TopBar switchMode={switchMode} />
+      </div>
 
       <LayoutContext.Provider value={mode}>
         <div
