@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { MainLayout, LayoutContext } from "../layout";
+import { LayoutContext } from "../layout";
 import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Section3 from "@/components/top/section3";
 import Section4 from "@/components/top/section4";
 import Auth from "@/components/top/section1/loginout";
@@ -19,7 +19,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./photos/logo.png" />
       </Head>
-
       <SlideShow />
       <div className="text-center pb-5 icon-components">
         <Icons />

@@ -1,8 +1,7 @@
 import Footer from "@/components/top/section1/footer.js";
 import BackgroundDay from "@/public/photos/main-background.jpeg";
 import BackgroundNight from "@/public/photos/main-background-night.jpg";
-import { Button } from "react-bootstrap";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useRef } from "react";
 import React from "react";
 import TopBar from "@/layout/topbar";
 
@@ -10,6 +9,25 @@ const LayoutContext = createContext();
 const MainLayout = ({ children }) => {
   const [localStorageMode, setLocalStorageMode] = useState("");
   const [mode, setMode] = useState(localStorageMode);
+  const [showTopBar, setShowTopBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      if (position >= 2) {
+        return setShowTopBar(true);
+      }
+      return setShowTopBar(false);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     let value = localStorage.getItem("mode");
@@ -31,11 +49,9 @@ const MainLayout = ({ children }) => {
 
   return (
     <>
-    <TopBar />
+      {showTopBar && <TopBar switchMode={switchMode} />}
+
       <LayoutContext.Provider value={mode}>
-        <Button onClick={switchMode} className="position-fixed mode-switcher">
-          Switch mode
-        </Button>
         <div
           className="main-layout"
           style={{

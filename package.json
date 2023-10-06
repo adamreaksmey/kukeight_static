@@ -12,10 +12,13 @@
     "bootstrap": "^5.3.2",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
+    "lodash": "^4.17.21",
     "next": "13.5.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9",
+    "react-use-scroll-position": "^2.0.0"
   },
   "devDependencies": {
     "sass": "^1.68.0"

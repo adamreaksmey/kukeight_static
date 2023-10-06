@@ -1,11 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/public/photos/logo.png";
 
-const TopBar = () => {
+const TopBar = (props) => {
+  const { switchMode } = props;
+
+  const switchBackgroundMode = () => {
+    switchMode();
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top position-fixed w-100">
       <div className="container">
         <Link href="/" className="navbar-brand">
-          Your Logo
+          <Image
+            src={Logo.src}
+            width={60}
+            height={60}
+            className="logo-img"
+            alt="logo"
+          />{" "}
+          | KUKeight
         </Link>
         <button
           className="navbar-toggler"
@@ -18,7 +33,10 @@ const TopBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse w-100 justify-content-end gap-5"
+          id="navbarNav"
+        >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link href="/" className="nav-link">
@@ -27,13 +45,28 @@ const TopBar = () => {
             </li>
             <li className="nav-item">
               <Link href="/about" className="nav-link">
-                About
+                The Creators
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact" className="nav-link">
-                Contact
+              <Link href="/support" className="nav-link">
+                Support Us
               </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/help" className="nav-link">
+                Help
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/faq" className="nav-link">
+                FAQ
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={switchBackgroundMode} style={{ cursor: "pointer"}}>
+                Switch mode
+              </a>
             </li>
           </ul>
         </div>

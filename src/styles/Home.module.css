@@ -9,8 +9,7 @@
 
 .content {
   height: 90vh !important;
-  overflow-x: scroll;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .highlighted {
