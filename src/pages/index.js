@@ -29,7 +29,7 @@ export default function Home() {
           backgroundColor: `${
             mode == "night" ? "rgb(24 111 101 / 56%)" : "#dafffb61"
           }`,
-          borderRadius: "10px"
+          borderRadius: "10px",
         }}
       >
         <Section2 />
@@ -39,8 +39,9 @@ export default function Home() {
       </div>
       <hr />
       <div className="w-100 top-2">
-        <Section4 mode={mode}/>
+        <Section4 mode={mode} />
       </div>
+      <hr />
     </>
   );
 }

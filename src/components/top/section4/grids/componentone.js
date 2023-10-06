@@ -66,13 +66,13 @@ const ComponentOne = (props) => {
             className="logo-img pb-2"
             alt="logo"
           />
-          <h5>Creative Collaboration</h5>
+          <h5>Cross-Platform Accessibility</h5>
           <hr className="w-50" />
           <div>
-            KUKEight provides a vibrant community of global creators where you
-            can connect, collaborate, and share ideas. Gain inspiration, receive
-            valuable feedback, and collaborate with like-minded individuals,
-            fostering growth and expanding your creative horizons.
+            Access KUKEight from anywhere, anytime, on various devices. Whether
+            you prefer writing on your computer, tablet, or smartphone, KUKEight
+            offers seamless cross-platform accessibility, ensuring you can write
+            whenever inspiration strikes.
           </div>
         </div>
       </Col>
