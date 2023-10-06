@@ -24,7 +24,7 @@ const Creators = () => {
             <hr className="w-50" />
             <div>
               Hello, I am Adam, a passionate software developer! For me, life is
-              incomplete without the art of programming. But there's a world
+              incomplete without the art of programming. But there is a world
               beyond that one where reading and writing intertwine, bringing
               true fulfillment. As a developer, my purpose goes beyond crafting
               code. I am driven to create an exceptional user experience,
@@ -49,7 +49,7 @@ const Creators = () => {
             <hr className="w-50" />
             <div>
               Hello, I am Adam, a passionate software developer! For me, life is
-              incomplete without the art of programming. But there's a world
+              incomplete without the art of programming. But there is a world
               beyond that one where reading and writing intertwine, bringing
               true fulfillment. As a developer, my purpose goes beyond crafting
               code. I am driven to create an exceptional user experience,
@@ -74,7 +74,7 @@ const Creators = () => {
             <hr className="w-50" />
             <div>
               Hello, I am Adam, a passionate software developer! For me, life is
-              incomplete without the art of programming. But there's a world
+              incomplete without the art of programming. But there is a world
               beyond that one where reading and writing intertwine, bringing
               true fulfillment. As a developer, my purpose goes beyond crafting
               code. I am driven to create an exceptional user experience,
@@ -99,7 +99,7 @@ const Creators = () => {
             <hr className="w-50" />
             <div>
               Hello, I am Adam, a passionate software developer! For me, life is
-              incomplete without the art of programming. But there's a world
+              incomplete without the art of programming. But there is a world
               beyond that one where reading and writing intertwine, bringing
               true fulfillment. As a developer, my purpose goes beyond crafting
               code. I am driven to create an exceptional user experience,
