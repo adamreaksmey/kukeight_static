@@ -43,7 +43,7 @@ export default function Home() {
         <Section4 mode={mode} />
       </div>
       <hr />
-      <div className="w-100 top-2 text-center">
+      <div className="w-100 top-2 text-center white">
         <h2 className="text-decoration-underline pb-3">
           Behind the curtains...
         </h2>
