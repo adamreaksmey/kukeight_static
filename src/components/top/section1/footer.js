@@ -10,7 +10,7 @@ export default function Footer() {
             Home
           </Link>
           <Link href="/about" passHref>
-            About Us
+            The Creators
           </Link>
           <Link href="/support" passHref>
             Support Us

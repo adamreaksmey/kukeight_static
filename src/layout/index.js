@@ -4,6 +4,7 @@ import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { Button } from "react-bootstrap";
 import { createContext, useEffect, useState } from "react";
 import React from "react";
+import TopBar from "@/layout/topbar";
 
 const LayoutContext = createContext();
 const MainLayout = ({ children }) => {
@@ -29,21 +30,24 @@ const MainLayout = ({ children }) => {
   };
 
   return (
-    <LayoutContext.Provider value={mode}>
-      <Button onClick={switchMode} className="position-fixed mode-switcher">
-        Switch mode
-      </Button>
-      <div
-        className="main-layout"
-        style={{
-          backgroundImage: `url(${images["background_" + localStorageMode]})`,
-          color: `${localStorageMode == "day" ? "black" : "white"}`,
-        }}
-      >
-        <div className="content">{children}</div>
-        <Footer />
-      </div>
-    </LayoutContext.Provider>
+    <>
+    <TopBar />
+      <LayoutContext.Provider value={mode}>
+        <Button onClick={switchMode} className="position-fixed mode-switcher">
+          Switch mode
+        </Button>
+        <div
+          className="main-layout"
+          style={{
+            backgroundImage: `url(${images["background_" + localStorageMode]})`,
+            color: `${localStorageMode == "day" ? "black" : "white"}`,
+          }}
+        >
+          <div className="content">{children}</div>
+          <Footer />
+        </div>
+      </LayoutContext.Provider>
+    </>
   );
 };
 

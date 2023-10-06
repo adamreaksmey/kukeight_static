@@ -13,3 +13,5 @@
 .highlighted {
   background-color: #EAD7BB;
 }
+
+@import url("./layout/index.css");
