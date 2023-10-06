@@ -1,8 +1,6 @@
 import { BasicLayout } from "@/layout/basic";
 import Creators from "@/components/about/creators";
-import { Button } from "react-bootstrap";
-import Back from "@/public/photos/icons/back.png";
-import Image from "next/image";
+import BackHome from "@/components/general/backhome";
 import { useRouter } from 'next/router';
 
 const About = () => {
@@ -31,15 +29,7 @@ const About = () => {
           </div>
         </div>
         <div className="w-100 d-flex justify-content-center pb-5">
-          <Button variant="secondary" onClick={handleRedirectHome}>
-            <Image
-              src={Back.src}
-              width={30}
-              height={30}
-              className="logo-img scale-2"
-              alt="logo"
-            />
-          </Button>
+          <BackHome />
         </div>
         <div className="text-start">
           <Creators />
