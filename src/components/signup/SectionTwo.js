@@ -5,6 +5,9 @@ const SectionTwo = (props) => {
   const { form, handleFormChange, handleSubmit, router } = props;
   return (
     <Col className="signup-col h-100">
+      <div className="d-flex justify-content-center">
+        <h2>Sign up</h2>
+      </div>
       <Form onSubmit={handleSubmit} className="d-flex w-100 gap-5">
         <div className="w-50">
           <Form.Group controlId="email">

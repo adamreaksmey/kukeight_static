@@ -7,6 +7,7 @@ const SectionOne = (props) => {
   return (
     <div>
       <Col className="signup-logo w-100">
+
         <div className="w-100 text-center">
           <Image
             src={logoImage}
