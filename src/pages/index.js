@@ -6,6 +6,7 @@ import Section2 from "@/components/top/section2";
 import React, { useContext } from "react";
 import Section3 from "@/components/top/section3";
 import Section4 from "@/components/top/section4";
+import Auth from "@/components/top/section1/loginout";
 
 export default function Home() {
   const mode = useContext(LayoutContext);
@@ -42,6 +43,16 @@ export default function Home() {
         <Section4 mode={mode} />
       </div>
       <hr />
+      <div className="w-100 top-2 text-center">
+        <h2 className="text-decoration-underline pb-3">
+          Behind the curtains...
+        </h2>
+        <div>and many more awaits you behind this wall!</div>
+        <div className="pb-5">Sign up for free now and give us a try!</div>
+        <div className="d-flex justify-content-center">
+          <Auth />
+        </div>
+      </div>
     </>
   );
 }
