@@ -26,7 +26,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">&quot; Read &quot;</div>
+            <div className="fw-bold text">Read</div>
           </div>
           <div>
             <Image
@@ -36,7 +36,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">&quot; Write &quot;</div>
+            <div className="fw-bold text">Write</div>
           </div>
           <div>
             <Image
@@ -46,7 +46,7 @@ const Icons = () => {
               className="logo-img"
               alt="logo"
             />
-            <div className="fw-bold text">&quot; Immerse &quot;</div>
+            <div className="fw-bold text">Immerse</div>
           </div>
         </Col>
       </Row>
