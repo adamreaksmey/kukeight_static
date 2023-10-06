@@ -1,13 +1,14 @@
 import { BasicLayout } from "@/layout/basic";
 import Creators from "@/components/about/creators";
-import { useSpring, animated, config } from "react-spring";
+import { Button } from "react-bootstrap";
+import Back from "@/public/photos/icons/back.png";
+import Image from "next/image";
 
 const About = () => {
-  const props = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: config.molasses
-  });
+
+  const handleRedirectHome = () => {
+    window.location.href = "/"
+  };
   return (
     <BasicLayout>
       <div className="text-center w-100 p-5">
@@ -27,10 +28,19 @@ const About = () => {
             writing like never before!
           </div>
         </div>
+        <div className="w-100 d-flex justify-content-center pb-5">
+          <Button variant="secondary" onClick={handleRedirectHome}>
+            <Image
+              src={Back.src}
+              width={30}
+              height={30}
+              className="logo-img scale-2"
+              alt="logo"
+            />
+          </Button>
+        </div>
         <div className="text-start">
-          <animated.div style={props}>
-            <Creators />
-          </animated.div>
+          <Creators />
         </div>
       </div>
     </BasicLayout>

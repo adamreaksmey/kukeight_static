@@ -18,10 +18,10 @@ export default function App({ Component, pageProps }) {
     <>
       <animated.div style={props}>
         {currentUrl !== "/" ? (
-          <Component {...pageProps} />
+          <Component {...pageProps} style={props} />
         ) : (
           <MainLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} style={props} />
           </MainLayout>
         )}
       </animated.div>

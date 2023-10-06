@@ -8,8 +8,9 @@ import Section3 from "@/components/top/section3";
 import Section4 from "@/components/top/section4";
 import Auth from "@/components/top/section1/loginout";
 
-export default function Home() {
+export default function Home(props) {
   const mode = useContext(LayoutContext);
+  const { style } = props;
 
   return (
     <>
