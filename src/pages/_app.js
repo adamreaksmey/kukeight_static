@@ -1,24 +1,30 @@
+import { useRouter } from "next/router";
+import { useSpring, animated, config } from "react-spring";
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@/layout/index";
 import { MainLayout } from "@/layout/index";
-import { useRouter } from "next/router";
-import TopBar from "@/layout/topbar";
-import { useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const currentUrl = router.asPath;
 
-  if (currentUrl !== "/") {
-    return <Component {...pageProps} />;
-  }
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: config.molasses,
+  });
 
   return (
     <>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <animated.div style={props}>
+        {currentUrl !== "/" ? (
+          <Component {...pageProps} />
+        ) : (
+          <MainLayout>
+            <Component {...pageProps} />
+          </MainLayout>
+        )}
+      </animated.div>
     </>
   );
 }

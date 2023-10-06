@@ -16,7 +16,7 @@ const Creators = () => {
               src={Adam.src}
               width={100}
               height={140}
-              className="logo-img pb-2"
+              className="logo-img pb-2 scale-4"
               alt="logo"
             />
             <h5>Ros Sopheak ( Adam )</h5>
@@ -39,7 +39,7 @@ const Creators = () => {
               src={Vottey.src}
               width={100}
               height={150}
-              className="logo-img pb-2"
+              className="logo-img pb-2 scale-4"
               alt="logo"
             />
             <h5>Buntha Somavottey</h5>
@@ -64,7 +64,7 @@ const Creators = () => {
               src={Rattanak.src}
               width={100}
               height={110}
-              className="logo-img pb-2"
+              className="logo-img pb-2 scale-4"
               alt="logo"
             />
             <h5>Chea Rattanak</h5>
@@ -89,7 +89,7 @@ const Creators = () => {
               src={Kanytha.src}
               width={100}
               height={130}
-              className="logo-img pb-2"
+              className="logo-img pb-2 scale-4"
               alt="logo"
             />
             <h5>San Kanytha</h5>

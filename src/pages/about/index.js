@@ -1,7 +1,13 @@
 import { BasicLayout } from "@/layout/basic";
 import Creators from "@/components/about/creators";
+import { useSpring, animated, config } from "react-spring";
 
 const About = () => {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: config.molasses
+  });
   return (
     <BasicLayout>
       <div className="text-center w-100 p-5">
@@ -22,7 +28,9 @@ const About = () => {
           </div>
         </div>
         <div className="text-start">
-          <Creators />
+          <animated.div style={props}>
+            <Creators />
+          </animated.div>
         </div>
       </div>
     </BasicLayout>
