@@ -30,6 +30,7 @@ export default function SignupPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    router.push("/home");
   };
 
   const handleFormChange = (e) => {
