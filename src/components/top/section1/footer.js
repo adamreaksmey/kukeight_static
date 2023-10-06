@@ -21,7 +21,7 @@ export default function Footer() {
           <Link href="/faq" passHref>
             FAQ
           </Link>
-          <Link href="/privacy" passHref>
+          <Link href="/privacy-policy" passHref>
             Privacy & Policy
           </Link>
           <Link href="/license" passHref>
