@@ -72,7 +72,7 @@ const ComponentTwo = (props) => {
             Unlike traditional writing platforms, KUKEight allows you to
             generate visually stunning images based on your written novels. This
             integration of visuals enhances the reading experience, immersing
-            your audience in the world you've created.
+            your audience in the world you have created.
           </div>
         </div>
       </Col>
