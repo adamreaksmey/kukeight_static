@@ -3,11 +3,13 @@ import Creators from "@/components/about/creators";
 import { Button } from "react-bootstrap";
 import Back from "@/public/photos/icons/back.png";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 const About = () => {
 
+  const router = useRouter();
   const handleRedirectHome = () => {
-    window.location.href = "/"
+    router.push("/");
   };
   return (
     <BasicLayout>
