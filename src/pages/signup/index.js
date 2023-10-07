@@ -5,8 +5,10 @@ import Quotes from "@/components/quotes";
 import { useRouter } from "next/router";
 import SectionOne from "@/components/signup/SectionOne";
 import SectionTwo from "@/components/signup/SectionTwo";
+import BasicModal from "@/components/modal/index";
+import Auth from "@/components/hoc/Auth";
 
-export default function SignupPage() {
+const SignupPage = () => {
   const [form, setForm] = useState({
     email: "",
     username: "",
@@ -18,9 +20,11 @@ export default function SignupPage() {
     user_type: "",
   });
   const [quotes, setQuotes] = useState();
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    // quotes
     if (Quotes) {
       setQuotes(Quotes);
     }
@@ -30,7 +34,17 @@ export default function SignupPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (form.password !== form.confirm_password) {
+      setShowModal(true);
+      return;
+    }
+    const { confirm_password, ...newUser } = form;
+    localStorage.setItem("kukeight-authorized-user", JSON.stringify(newUser));
     router.push("/home");
+  };
+
+  const handleModal = () => {
+    setShowModal((prev) => !prev);
   };
 
   const handleFormChange = (e) => {
@@ -57,7 +71,15 @@ export default function SignupPage() {
             />
           </div>
         </div>
+        <BasicModal
+          showModal={showModal}
+          handleModalClose={handleModal}
+          title={"Oops!"}
+          body={"Your passwords did not match each other!"}
+        />
       </BasicLayout>
     </>
   );
-}
+};
+
+export default Auth(SignupPage);
