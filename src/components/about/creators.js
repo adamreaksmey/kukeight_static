@@ -97,13 +97,13 @@ const Creators = () => {
             </h6>
             <hr className="w-50" />
             <div>
-              Hello, I am Adam, a passionate software developer! For me, life is
-              incomplete without the art of programming. But there is a world
-              beyond that one where reading and writing intertwine, bringing
-              true fulfillment. As a developer, my purpose goes beyond crafting
-              code. I am driven to create an exceptional user experience,
-              inspiring individuals in this chaotic and fast-paced world to
-              embrace the joy of reading and writing.
+              I'm San Kanytha, a part of KUKeight, usually love to reading book
+              both physical and e-book (novel, self-help, mindset, psychology).
+              However, I can contribute to the KUKeight by providing assistance
+              processing and create relevant content for the website or
+              applications . With my my abilities, flexibility, and the idea I
+              have, I can help enhance user experience and ensure that the
+              web/app is user-friendly and efficient.
             </div>
           </div>
         </Col>
