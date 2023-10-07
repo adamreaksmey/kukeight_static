@@ -4,6 +4,7 @@ import BackgroundNight from "@/public/photos/main-background-night.jpg";
 import { createContext, useEffect, useState, useRef } from "react";
 import React from "react";
 import TopBar from "@/layout/topbar";
+import scroll from "@/components/functions/scroll";
 
 const LayoutContext = createContext();
 const MainLayout = ({ children }) => {
@@ -12,21 +13,7 @@ const MainLayout = ({ children }) => {
   const [showTopBar, setShowTopBar] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      if (position >= 2) {
-        return setShowTopBar(true);
-      }
-      return setShowTopBar(false);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    scroll(setShowTopBar)
   }, []);
 
   useEffect(() => {
