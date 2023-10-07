@@ -8,8 +8,6 @@ const Auth = (WrappedComponent) => {
       const userIsAuthorized = localStorage.getItem("kukeight-authorized-user");
       if (userIsAuthorized) {
         router.push("/home");
-      } else {
-        router.push("/");
       }
     }, []);
     return <WrappedComponent {...props} />;

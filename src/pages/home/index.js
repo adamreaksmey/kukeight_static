@@ -1,4 +1,5 @@
 import React from 'react'
+import Auth from "@/components/hoc/Auth";
 
 const Home = () => {
   return (
@@ -8,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Auth(Home);

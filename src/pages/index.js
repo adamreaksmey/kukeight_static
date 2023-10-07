@@ -7,8 +7,9 @@ import React, { useContext, useEffect } from "react";
 import Section3 from "@/components/top/section3";
 import Section4 from "@/components/top/section4";
 import Auth from "@/components/top/section1/loginout";
+import AuthHoc from "@/components/hoc/Auth";
 
-export default function Home(props) {
+const Home = (props) => {
   const mode = useContext(LayoutContext);
   const { style } = props;
 
@@ -56,3 +57,5 @@ export default function Home(props) {
     </>
   );
 }
+
+export default AuthHoc(Home);
