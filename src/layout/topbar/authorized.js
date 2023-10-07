@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import logout from "@/components/functions/logout";
 import { useRouter } from "next/router";
 
 const Authorized = (props) => {
   const router = useRouter();
-  const { switchBackgroundMode } = props;
   return (
     <div
       className="collapse navbar-collapse w-100 justify-content-end gap-5"
@@ -12,18 +12,18 @@ const Authorized = (props) => {
     >
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link href="/" className="nav-link">
-            Home ( Authorized )
+          <Link href="/home" className="nav-link">
+            Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/about" className="nav-link">
-            The Creators
+          <Link href="/profile" className="nav-link">
+            Profile
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/support" className="nav-link">
-            Support Us
+          <Link href="/write" className="nav-link">
+            Write
           </Link>
         </li>
         <li className="nav-item">
@@ -32,17 +32,18 @@ const Authorized = (props) => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/faq" className="nav-link">
-            FAQ
+          <Link href="/music" className="nav-link">
+            Music library
           </Link>
         </li>
-        <li className={router.asPath == "/" ? "nav-item" : "d-none"}>
+        <li className="nav-item">
           <a
             className="nav-link"
-            onClick={switchBackgroundMode}
-            style={{ cursor: "pointer" }}
+            onClick={() => {
+              logout(router);
+            }}
           >
-            Switch mode
+            Log out
           </a>
         </li>
       </ul>
