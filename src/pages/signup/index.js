@@ -18,6 +18,7 @@ const SignupPage = () => {
     confirm_password: "",
     language: "",
     user_type: "",
+    user_is_loggedout: false
   });
   const [quotes, setQuotes] = useState();
   const [showModal, setShowModal] = useState(false);

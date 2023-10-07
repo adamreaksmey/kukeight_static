@@ -18,6 +18,7 @@ const Paper = ({ children }) => {
           color: "black",
           fontWeight: "bold",
           padding: "0px",
+          paddingTop: "100px"
         }}
       >
         {children}

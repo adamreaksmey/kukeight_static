@@ -6,7 +6,10 @@ const Auth = (WrappedComponent) => {
     const router = useRouter();
     useEffect(() => {
       const userIsAuthorized = localStorage.getItem("kukeight-authorized-user");
-      if (userIsAuthorized) {
+      const parsed = JSON.parse(userIsAuthorized);
+      const userIsLoggedOut = parsed?.user_is_loggedout;
+      console.log(userIsLoggedOut)
+      if (!userIsLoggedOut) {
         router.push("/home");
       }
     }, []);
