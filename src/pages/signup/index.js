@@ -1,4 +1,4 @@
-import { BasicLayout } from "@/layout/basic";
+import { BasicLayout } from "@/layout/library";
 import React, { useEffect, useState } from "react";
 import Logo from "@/public/photos/logo.png";
 import Quotes from "@/components/quotes";

@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 export const BasicLayout = ({ children }) => {
   const bookshelfsImage = Library.src;
   const router = useRouter();
-
   return (
     <div
       className="basic-layout main-layout"

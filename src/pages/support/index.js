@@ -1,5 +1,5 @@
 import React from "react";
-import { BasicLayout } from "@/layout/basic/index";
+import { BasicLayout } from "@/layout/library";
 import BackHome from "@/components/general/backhome";
 
 const Support = () => {
