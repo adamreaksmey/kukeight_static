@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PaperImage from "@/public/photos/background/paper.jpg";
 import TopBar from "@/layout/topbar";
+import scroll from "@/components/functions/scroll";
 
 const Paper = ({ children }) => {
+  const [showTopBar, setShowTopBar] = useState(false);
+  useEffect(() => {
+    scroll(setShowTopBar);
+  });
   return (
     <>
-    <TopBar />
+      <TopBar />
       <div
         className="paper-layout main-layout"
         style={{
