@@ -7,9 +7,11 @@ import SectionOne from "@/components/signup/SectionOne";
 import SectionTwo from "@/components/signup/SectionTwo";
 import BasicModal from "@/components/modal/index";
 import Auth from "@/components/hoc/Auth";
+import { v4 as uuidv4 } from 'uuid';
 
 const SignupPage = () => {
   const [form, setForm] = useState({
+    id: uuidv4(),
     email: "",
     username: "",
     age: "",
@@ -40,7 +42,8 @@ const SignupPage = () => {
       return;
     }
     const { confirm_password, ...newUser } = form;
-    localStorage.setItem("kukeight-authorized-user", JSON.stringify(newUser));
+    localStorage.setItem("kukeight-authorized-user", JSON.stringify([newUser]));
+    localStorage.setItem("auth-user-id", newUser.id)
     router.push("/home");
   };
 

@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import TopIsAuthorized from "@/components/hoc/AuthorizedTop";
 import Authorized from "@/layout/topbar/authorized";
 import Unauthorized from "@/layout/topbar/unauthorized";
-import { useEffect, useState } from "react";
 
 const TopBar = (props) => {
   const { switchMode } = props;
