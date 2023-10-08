@@ -10,20 +10,10 @@ import { useEffect, useState } from "react";
 const TopBar = (props) => {
   const { switchMode } = props;
   const router = useRouter();
-  const [authorized, setAuthorized] = useState(false);
 
   const switchBackgroundMode = () => {
     switchMode();
   };
-
-  useEffect(() => {
-    const authorized = localStorage.getItem("kukeight-authorized-user");
-    if (authorized) {
-      setAuthorized(true);
-    } else {
-      setAuthorized(false);
-    }
-  });
 
   const Authorization = TopIsAuthorized(Authorized, Unauthorized);
 
@@ -52,7 +42,6 @@ const TopBar = (props) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Authorization
-          showAuthorized={authorized}
           switchBackgroundMode={switchBackgroundMode}
         />
       </div>
