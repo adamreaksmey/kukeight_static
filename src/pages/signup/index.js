@@ -42,7 +42,8 @@ const SignupPage = () => {
       return;
     }
     const { confirm_password, ...newUser } = form;
-    // try to push newly sign up users into the initialized array.
+    const allUsers = JSON?.parse(localStorage.getItem("kukeight-authorized-users"));
+    return allUsers;
     localStorage.setItem("kukeight-authorized-users", JSON.stringify([newUser]));
     localStorage.setItem("auth-user-id", newUser.id)
     router.push("/home");

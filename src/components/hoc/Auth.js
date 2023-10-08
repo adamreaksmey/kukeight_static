@@ -10,7 +10,7 @@ const Auth = (WrappedComponent) => {
 
       const foundUser = allUsers?.find(obj => obj.id == authUserId);
       const checkIfLoggedOut = foundUser?.user_is_loggedout;
-      if (!checkIfLoggedOut && allUsers && router.asPath == "/"){
+      if (!checkIfLoggedOut && foundUser && router.asPath == "/"){
         router.push("/home");
       }
     }, []);
