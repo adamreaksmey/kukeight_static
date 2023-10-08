@@ -5,12 +5,12 @@ const Auth = (WrappedComponent) => {
   const Wrapper = (props) => {
     const router = useRouter();
     useEffect(() => {
-      const allUsers = JSON.parse(localStorage.getItem("kukeight-authorized-user"));
+      const allUsers = JSON?.parse(localStorage.getItem("kukeight-authorized-users"));
       const authUserId = localStorage.getItem("auth-user-id");
 
       const foundUser = allUsers?.find(obj => obj.id == authUserId);
       const checkIfLoggedOut = foundUser?.user_is_loggedout;
-      if (!checkIfLoggedOut){
+      if (!checkIfLoggedOut && allUsers && router.asPath == "/"){
         router.push("/home");
       }
     }, []);

@@ -1,13 +1,17 @@
 const logout = (router) => {
-  const authName = "kukeight-authorized-user";
-  const loggedInUser = localStorage.getItem(authName);
-  const parsed = JSON.parse(loggedInUser);
-  const addOrMutateLogStatus = {
-    ...parsed,
-    user_is_loggedout: true
-  }
-  if (loggedInUser) {
-    localStorage.setItem(authName, JSON.stringify(addOrMutateLogStatus));
+  const authName = "kukeight-authorized-users";
+  const loggedInUsers = JSON.parse(localStorage.getItem(authName));
+  const authUserId = localStorage.getItem("auth-user-id");
+  const foundUser = loggedInUsers.find((obj) => obj.id == authUserId);
+
+  const newObjectUsers = loggedInUsers.map((obj) => {
+    if (obj.id == authUserId) {
+      return { ...obj, user_is_loggedout: true };
+    }
+  });
+
+  if (foundUser) {
+    localStorage.setItem(authName, JSON.stringify(newObjectUsers));
     router.push("/");
   }
   return null;
