@@ -5,6 +5,7 @@ import Recommended from "@/components/functions/home/recommendation";
 import Image from "next/image";
 import Recommendation from "@/components/home/section-1";
 import ContinueReading from "@/components/home/section-2/continue-reading";
+import { Row, Col } from "react-bootstrap";
 
 const Home = () => {
   const [recommendedBooks, setRecommendedBooks] = useState([]);
@@ -19,14 +20,23 @@ const Home = () => {
           <Recommendation recommendedBooks={recommendedBooks} />
         </div>
         <hr />
-        <div className="section-2 continue-reading saved-books d-flex w-100">
-          <div className="w-75">
+        <Row className="section-2 continue-reading saved-books pt-5 gap-2">
+          <Col xs={5} className="books-grid-padding">
+            <h5 className="px-5 pb-3 pt-3 fw-bold">Saved Books</h5>
             <ContinueReading books={recommendedBooks} />
-          </div>
-          <div className="w-100">{/* Acting as saved books */ }
+          </Col>
+          <Col xs={5} className="books-grid-padding">
+            <h5 className="px-5 pb-3 pt-3 fw-bold">Continue Reading...</h5>
             <ContinueReading books={recommendedBooks} />
-          </div>
-        </div>
+          </Col>
+          <Col
+            xs={1}
+            className="books-grid-padding"
+            style={{ width: "15.333333%" }}
+          >
+            Hello world
+          </Col>
+        </Row>
       </Paper>
     </>
   );

@@ -5,17 +5,17 @@ import { Row, Col } from "react-bootstrap";
 
 const ContinueReading = ({ books }) => {
   const booksPerChunk = 3;
-  const chunks = Array.from({ length: 2 }, (_, index) =>
-    books.slice(index * booksPerChunk, (index + 1) * booksPerChunk)
-  );
+  const chunks = Array.from({ length: 2 }, (_, index) => {
+    return books.slice(index * booksPerChunk, (index + 1) * booksPerChunk);
+  });
 
-  //   basically what this does is dividing objects to put into a new array based on the 
-//   chunk size and how many arrays ( length: 4 ) should be created into a new array
+  //   basically what this does is dividing objects to put into a new array based on the
+  //   chunk size and how many arrays ( length: 4 ) should be created into a new array
 
   return (
-    <div className="overflow-scroll">
+    <div className="overflow-scroll" style={{ paddingLeft: "1.55rem" }}>
       {chunks.map((chunk, chunkIndex) => (
-        <Row key={chunkIndex} className="w-100">
+        <Row key={chunkIndex} className="w-100 d-flex justify-content-center">
           {chunk.map((data, index) => (
             <Col key={index} className="nowidth-col">
               <Image
