@@ -39,6 +39,7 @@ const Authorized = (props) => {
         <li className="nav-item">
           <a
             className="nav-link"
+            role="button"
             onClick={() => {
               logout(router);
             }}

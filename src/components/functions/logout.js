@@ -12,9 +12,10 @@ const logout = (router) => {
 
   if (foundUser) {
     localStorage.setItem(authName, JSON.stringify(newObjectUsers));
+    localStorage.removeItem("auth-user-id");
     router.push("/");
   }
-  return null;
+  return;
 };
 
 export default logout;

@@ -1,13 +1,13 @@
-import { BasicLayout } from "@/layout/library";
-import React, { useEffect, useState } from "react";
-import Logo from "@/public/photos/logo.png";
-import Quotes from "@/components/quotes";
-import { useRouter } from "next/router";
 import SectionOne from "@/components/signup/SectionOne";
 import SectionTwo from "@/components/signup/SectionTwo";
+import React, { useEffect, useState } from "react";
 import BasicModal from "@/components/modal/index";
+import { BasicLayout } from "@/layout/library";
+import Logo from "@/public/photos/logo.png";
+import Quotes from "@/components/quotes";
 import Auth from "@/components/hoc/Auth";
-import { v4 as uuidv4 } from 'uuid';
+import { useRouter } from "next/router";
+import { v4 as uuidv4 } from "uuid";
 
 const SignupPage = () => {
   const [form, setForm] = useState({
@@ -20,7 +20,7 @@ const SignupPage = () => {
     confirm_password: "",
     language: "",
     user_type: "",
-    user_is_loggedout: false
+    user_is_loggedout: false,
   });
   const [quotes, setQuotes] = useState();
   const [showModal, setShowModal] = useState(false);
@@ -42,10 +42,12 @@ const SignupPage = () => {
       return;
     }
     const { confirm_password, ...newUser } = form;
-    const allUsers = JSON?.parse(localStorage.getItem("kukeight-authorized-users"));
-    return allUsers;
-    localStorage.setItem("kukeight-authorized-users", JSON.stringify([newUser]));
-    localStorage.setItem("auth-user-id", newUser.id)
+    const allUsers = JSON?.parse(
+      localStorage.getItem("kukeight-authorized-users")
+    );
+    allUsers.push(form);
+    localStorage.setItem("kukeight-authorized-users", JSON.stringify(allUsers));
+    localStorage.setItem("auth-user-id", newUser.id);
     router.push("/home");
   };
 
