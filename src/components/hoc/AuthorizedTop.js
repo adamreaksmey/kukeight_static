@@ -10,7 +10,7 @@ const TopIsAuthorized = (WrappedComponent, UnauthorizedComponent) => {
         const allUsers = JSON.parse(localStorage.getItem("kukeight-authorized-users"));
         const authUserId = localStorage.getItem("auth-user-id");
   
-        const foundUser = allUsers?.find(obj => obj.id == authUserId);
+        const foundUser = allUsers?.find(obj => obj?.id == authUserId);
         if (foundUser){
             setUserExistsInLocal(true);
         }

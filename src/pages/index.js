@@ -11,7 +11,7 @@ import AuthHoc from "@/components/hoc/Auth";
 
 const Home = (props) => {
   const mode = useContext(LayoutContext);
-  const { style } = props;
+  const { style, users } = props;
 
   return (
     <>
@@ -51,7 +51,7 @@ const Home = (props) => {
         <div>and many more awaits you behind this wall!</div>
         <div className="pb-5">Sign up for free now and give us a try!</div>
         <div className="d-flex justify-content-center">
-          <Auth />
+          <Auth users={users}/>
         </div>
       </div>
     </>

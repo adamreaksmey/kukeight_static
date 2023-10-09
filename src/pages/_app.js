@@ -3,11 +3,12 @@ import { useSpring, animated, config } from "react-spring";
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MainLayout } from "@/layout/index";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const currentUrl = router.asPath;
+  const [allAuthorizedUsers, setAllAuthorizedUsers] = useState("");
 
   const props = useSpring({
     opacity: 1,
@@ -16,20 +17,28 @@ export default function App({ Component, pageProps }) {
   });
 
   useEffect(() => {
-    const checkIfArrayExistsLocally = localStorage.getItem("kukeight-authorized-users");
+    const checkIfArrayExistsLocally = localStorage.getItem(
+      "kukeight-authorized-users"
+    );
     if (!checkIfArrayExistsLocally) {
       localStorage.setItem("kukeight-authorized-users", "[]");
     }
-  })
+    const parsed = JSON.parse(checkIfArrayExistsLocally);
+    setAllAuthorizedUsers(parsed);
+  }, []);
 
   return (
     <>
       <animated.div style={props}>
         {currentUrl !== "/" ? (
-          <Component {...pageProps} style={props} />
+          <Component {...pageProps} style={props} users={allAuthorizedUsers} />
         ) : (
           <MainLayout>
-            <Component {...pageProps} style={props} />
+            <Component
+              {...pageProps}
+              style={props}
+              users={allAuthorizedUsers}
+            />
           </MainLayout>
         )}
       </animated.div>

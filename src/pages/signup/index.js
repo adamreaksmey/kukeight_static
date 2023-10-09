@@ -9,7 +9,7 @@ import Auth from "@/components/hoc/Auth";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 
-const SignupPage = () => {
+const SignupPage = (props) => {
   const [form, setForm] = useState({
     id: uuidv4(),
     email: "",
@@ -23,7 +23,12 @@ const SignupPage = () => {
     user_is_loggedout: false,
   });
   const [quotes, setQuotes] = useState();
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState({
+    show: false,
+    title: "",
+    body: "",
+  });
+  const { users } = props;
   const router = useRouter();
 
   useEffect(() => {
@@ -38,15 +43,25 @@ const SignupPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form.password !== form.confirm_password) {
-      setShowModal(true);
+      setShowModal((prev) => ({
+        show: true,
+        title: "Oops!",
+        body: "Wrong password, please try again!",
+      }));
+      return;
+    }
+    const checkIfUsersExists = users.find((data) => data.email == form.email);
+    if (checkIfUsersExists) {
+      setShowModal((prev) => ({
+        show: true,
+        title: "Oops!",
+        body: "User already exists, Please log in!",
+      }));
       return;
     }
     const { confirm_password, ...newUser } = form;
-    const allUsers = JSON?.parse(
-      localStorage.getItem("kukeight-authorized-users")
-    );
-    allUsers.push(form);
-    localStorage.setItem("kukeight-authorized-users", JSON.stringify(allUsers));
+    users.push(form);
+    localStorage.setItem("kukeight-authorized-users", JSON.stringify(users));
     localStorage.setItem("auth-user-id", newUser.id);
     router.push("/home");
   };
@@ -80,10 +95,10 @@ const SignupPage = () => {
           </div>
         </div>
         <BasicModal
-          showModal={showModal}
+          showModal={showModal.show}
           handleModalClose={handleModal}
-          title={"Oops!"}
-          body={"Your passwords did not match each other!"}
+          title={showModal.title}
+          body={showModal.body}
         />
       </BasicLayout>
     </>

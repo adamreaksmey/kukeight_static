@@ -4,14 +4,11 @@ const logout = (router) => {
   const authUserId = localStorage.getItem("auth-user-id");
   const foundUser = loggedInUsers.find((obj) => obj.id == authUserId);
 
-  const newObjectUsers = loggedInUsers.map((obj) => {
-    if (obj.id == authUserId) {
-      return { ...obj, user_is_loggedout: true };
-    }
-  });
+  const newObjectUsers = loggedInUsers.find(data => data.id == authUserId);
+  newObjectUsers["user_is_loggedout"] = true;
 
   if (foundUser) {
-    localStorage.setItem(authName, JSON.stringify(newObjectUsers));
+    localStorage.setItem(authName, JSON.stringify(loggedInUsers));
     localStorage.removeItem("auth-user-id");
     router.push("/");
   }

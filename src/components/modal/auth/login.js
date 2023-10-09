@@ -51,14 +51,8 @@ export default function Login() {
       setShowModal(true);
       return;
     }
-
-    const mutatedArray = allUsers.map((data) => {
-      return { ...data, user_is_loggedout: false };
-    });
-    localStorage.setItem(
-      "kukeight-authorized-users",
-      JSON.stringify(mutatedArray)
-    );
+    user["user_is_loggedout"] = false;
+    localStorage.setItem("kukeight-authorized-users", JSON.stringify(allUsers));
     localStorage.setItem("auth-user-id", user.id);
     router.push("/home");
     return;
