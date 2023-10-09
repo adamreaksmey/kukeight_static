@@ -17,8 +17,7 @@ const Paper = ({ children }) => {
           backgroundImage: `url(${PaperImage.src})`,
           color: "black",
           fontWeight: "bold",
-          padding: "0px",
-          paddingTop: "100px"
+          padding: "100px 10rem 0px 10rem"
         }}
       >
         {children}

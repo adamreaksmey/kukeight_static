@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import BasicModal from "@/components/modal/index";
 import { BasicLayout } from "@/layout/library";
 import Logo from "@/public/photos/logo.png";
-import Quotes from "@/components/quotes";
+import Quotes from "@/components/functions/quotes";
 import Auth from "@/components/hoc/Auth";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";

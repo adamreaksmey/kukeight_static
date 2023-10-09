@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <>
       <Paper>
-        <div>Hello world</div>
+        <div className="">
+          Recent Top Recommendation:
+        </div>
       </Paper>
     </>
   );

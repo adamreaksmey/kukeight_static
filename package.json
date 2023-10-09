@@ -19,6 +19,7 @@
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.9",
     "react-spring": "^9.7.3",
+    "react-star-rating-component": "^1.4.1",
     "react-use-scroll-position": "^2.0.0",
     "uuid": "^9.0.1"
   },
