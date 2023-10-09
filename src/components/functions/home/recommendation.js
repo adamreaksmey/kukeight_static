@@ -1,52 +1,68 @@
-const recommendedBooks = [
+
+
+const recommendation = () => {
+  const recommendedBooks = [
     {
       image: "",
       title: "The Fault in Our Stars",
-      rating: 4.24
+      author: "John Green",
+      rating: 4.24,
     },
     {
       image: "",
       title: "The Hunger Games",
-      rating: 4.33
+      author: "Suzanne Collins",
+      rating: 4.33,
     },
     {
       image: "",
       title: "The Perks of Being a Wallflower",
-      rating: 4.21
+      author: "Stephen Chbosky",
+      rating: 4.21,
     },
     {
       image: "",
       title: "Harry Potter and the Philosopher's Stone",
-      rating: 4.48
+      author: "J.K Rowling",
+      rating: 4.48,
     },
     {
       image: "",
       title: "The Giver",
-      rating: 4.13
+      author: "Lois Lowry",
+      rating: 4.13,
     },
     {
       image: "",
       title: "Divergent",
-      rating: 4.21
+      author: "Veronica Roth",
+      rating: 4.21,
     },
     {
       image: "",
       title: "Twilight",
-      rating: 3.59
+      author: "Stephenie Meyer",
+      rating: 3.59,
     },
     {
       image: "",
       title: "The Maze Runner",
-      rating: 4.03
+      author: "James Dashner",
+      rating: 4.03,
     },
     {
       image: "",
       title: "The Book Thief",
-      rating: 4.37
+      author: "Markus Zuksak",
+      rating: 4.37,
     },
     {
       image: "",
       title: "The Outsiders",
-      rating: 4.10
-    }
+      author: "S. E. Hinton",
+      rating: 4.1,
+    },
   ];
+
+  return recommendedBooks;
+};
