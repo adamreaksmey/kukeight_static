@@ -55,7 +55,11 @@ const Recommendation = (props) => {
             />
             <hr style={{ margin: "0.5rem 0" }} />
             <div className="fw-bold">{data.title}</div>
-            <StarRatingComponent value={data.rating} starColor={"#CD5C08"} />
+            <StarRatingComponent
+              name={"Books rating"}
+              value={data.rating}
+              starColor={"#CD5C08"}
+            />
           </div>
         ))}
       </div>
