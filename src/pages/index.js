@@ -3,14 +3,15 @@ import { LayoutContext } from "../layout";
 import SlideShow from "@/components/top/section1/slideshow.js";
 import Icons from "@/components/top/section1/icons";
 import Section2 from "@/components/top/section2";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Section3 from "@/components/top/section3";
 import Section4 from "@/components/top/section4";
 import Auth from "@/components/top/section1/loginout";
+import AuthHoc from "@/components/hoc/Auth";
 
-export default function Home(props) {
+const Home = (props) => {
   const mode = useContext(LayoutContext);
-  const { style } = props;
+  const { style, users } = props;
 
   return (
     <>
@@ -50,9 +51,11 @@ export default function Home(props) {
         <div>and many more awaits you behind this wall!</div>
         <div className="pb-5">Sign up for free now and give us a try!</div>
         <div className="d-flex justify-content-center">
-          <Auth />
+          <Auth users={users}/>
         </div>
       </div>
     </>
   );
 }
+
+export default AuthHoc(Home);

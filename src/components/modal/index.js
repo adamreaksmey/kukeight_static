@@ -2,7 +2,14 @@ import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 export default function BasicModal(props) {
-  const { showModal, handleModalClose, title, body, hideSecond } = props;
+  const {
+    showModal,
+    handleModalClose,
+    title,
+    body,
+    hideSecond,
+    handleModalOK,
+  } = props;
   return (
     <>
       <Modal show={showModal} onHide={handleModalClose}>
@@ -15,7 +22,7 @@ export default function BasicModal(props) {
             Close
           </Button>
           {!hideSecond ?? (
-            <Button variant="secondary" onClick={handleModalClose}>
+            <Button variant="secondary" onClick={handleModalOK}>
               Ok
             </Button>
           )}

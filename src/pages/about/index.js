@@ -1,4 +1,4 @@
-import { BasicLayout } from "@/layout/basic";
+import { BasicLayout } from "@/layout/library";
 import Creators from "@/components/about/creators";
 import BackHome from "@/components/general/backhome";
 import { useRouter } from 'next/router';

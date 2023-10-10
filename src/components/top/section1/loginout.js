@@ -4,7 +4,8 @@ import BasicModal from "@/components/modal";
 import Login from "@/components/modal/auth/login";
 import { useRouter } from "next/router";
 
-export default function Auth() {
+export default function Auth(props) {
+  const { users } = props;
   const [showModal, setShowModal] = useState(false);
   const [component, setComponent] = useState({
     component: null,

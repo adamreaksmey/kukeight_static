@@ -7,13 +7,12 @@ const SectionOne = (props) => {
   return (
     <div>
       <Col className="signup-logo w-100">
-
         <div className="w-100 text-center">
           <Image
             src={logoImage}
             alt="image"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             style={{ filter: "drop-shadow(21px 20px 8px black)" }}
           />
         </div>

@@ -15,11 +15,11 @@
 }
 
 .skin {
-  color: #F5E8B7;
+  color: #f5e8b7;
 }
 
 .scale-1:hover {
-  transform: scale(1.01)
+  transform: scale(1.01);
 }
 
 .scale-1 {
@@ -27,7 +27,7 @@
 }
 
 .scale-2:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .scale-2 {
@@ -35,14 +35,14 @@
 }
 
 .scale-3:hover {
-  transform: scale(1.5)
+  transform: scale(1.5);
 }
 .scale-3 {
   transition: transform 0.3s ease-in-out;
 }
 
 .scale-4:hover {
-  transform: scale(1.7)
+  transform: scale(1.7);
 }
 .scale-4 {
   transition: transform 0.3s ease-in-out;
@@ -55,4 +55,9 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.nowidth-col {
+  flex: 0 0 !important;
+}
+
 @import url("./layout/index.css");
+@import url("./home/index.css");
