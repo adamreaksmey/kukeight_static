@@ -41,8 +41,14 @@ const Home = () => {
             className="books-grid-padding"
             style={{ width: "15.333333%" }}
           >
-            <h5 className="pb-3 pt-3 fw-bold">Top Writers</h5>
+            <h5 className="pt-3 fw-bold">Top Writers</h5>
+            <hr />
             <TopWriters writers={topWriters} />
+          </Col>
+        </Row>
+        <Row className="section-2 continue-reading saved-books pt-5 gap-2">
+          <Col xs={5} className="books-grid-padding">
+            <h5 className="px-5 pb-3 pt-3 fw-bold">Writer Of The Year</h5>
           </Col>
         </Row>
       </Paper>
