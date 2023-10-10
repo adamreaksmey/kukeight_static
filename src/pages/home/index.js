@@ -5,7 +5,7 @@ import Recommended from "@/components/functions/home/recommendation";
 import Image from "next/image";
 import Recommendation from "@/components/home/section-1";
 import ContinueReading from "@/components/home/section-2/continue-reading";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import TopWritersList from "@/components/functions/home/writers";
 import TopWriters from "@/components/home/section-2/top-writers";
 import SectionThree from "@/components/home/section-3";
@@ -55,8 +55,12 @@ const Home = () => {
             <TopWriters writers={topWriters} />
           </Col>
         </Row>
-        <Row className="section-3 writer-of-the-year pt-5 gap-2">
-          <Col xs={5} className="books-grid-padding h-100">
+        <Row className="section-3 writer-of-the-year pt-5 gap-2 align-items-start">
+          <Col
+            xs={5}
+            className="books-grid-padding pb-3 overflow-scroll"
+            style={{ height: "18vw" }}
+          >
             <div className="px-5">
               <h5 className="pt-3 fw-bold">Writer Of The Year</h5>
               <hr />
@@ -67,7 +71,11 @@ const Home = () => {
               />
             </div>
           </Col>
-          <Col xs={5} className="books-grid-padding">
+          <Col
+            xs={5}
+            className="books-grid-padding pb-3 overflow-scroll"
+            style={{ height: "18vw" }}
+          >
             <div className="px-5">
               <h5 className="pt-3 fw-bold">Book Of The Year</h5>
               <hr />
@@ -77,6 +85,22 @@ const Home = () => {
                 buttonCaption={"View writer's work..."}
               />
             </div>
+          </Col>
+
+          <Col
+            xs={1}
+            className="books-grid-padding"
+            style={{ width: "15.333333%" }}
+          >
+            <h5 className="pt-3 fw-bold">Top Searches</h5>
+            <hr />
+            <ListGroup>
+              {recommendedBooks.slice(0, 6).map((data, index) => (
+                <ListGroupItem className="bg-transparent" role="button" style={{ fontSize: "0.8rem"}}>
+                  {index+1 + "." + data.title}
+                </ListGroupItem>
+              ))}
+            </ListGroup>
           </Col>
         </Row>
       </Paper>

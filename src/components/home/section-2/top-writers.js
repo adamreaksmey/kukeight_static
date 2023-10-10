@@ -6,7 +6,7 @@ const TopWriters = (props) => {
   return (
     <>
       {writers.slice(0, 6).map((data, index) => (
-        <div className="d-flex w-100 gap-2 pb-4">
+        <div className="d-flex w-100 gap-2 pb-4" key={index}>
           <Image
             src={data.image_url}
             width={60}
