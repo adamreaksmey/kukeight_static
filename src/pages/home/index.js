@@ -58,7 +58,8 @@ const Home = () => {
         <Row className="section-3 writer-of-the-year pt-5 gap-2">
           <Col xs={5} className="books-grid-padding h-100">
             <div className="px-5">
-              <h5 className="pb-3 pt-3 fw-bold">Writer Of The Year</h5>
+              <h5 className="pt-3 fw-bold">Writer Of The Year</h5>
+              <hr />
               <SectionThree
                 image={WS.src}
                 description={writerOfTheYearDescription}
@@ -68,7 +69,8 @@ const Home = () => {
           </Col>
           <Col xs={5} className="books-grid-padding">
             <div className="px-5">
-              <h5 className="pb-3 pt-3 fw-bold">Book Of The Year</h5>
+              <h5 className="pt-3 fw-bold">Book Of The Year</h5>
+              <hr />
               <SectionThree
                 image={BookOfTheYear.src}
                 description={bookOfTheYearDescription}
