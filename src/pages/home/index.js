@@ -6,12 +6,19 @@ import Image from "next/image";
 import Recommendation from "@/components/home/section-1";
 import ContinueReading from "@/components/home/section-2/continue-reading";
 import { Row, Col } from "react-bootstrap";
+import TopWritersList from "@/components/functions/home/writers";
+import TopWriters from "@/components/home/section-2/top-writers";
 
 const Home = () => {
   const [recommendedBooks, setRecommendedBooks] = useState([]);
+  const [topWriters, setTopWriters] = useState([]);
+
   useEffect(() => {
     const setBooks = Recommended();
     setRecommendedBooks(setBooks);
+
+    const setWriters = TopWritersList();
+    setTopWriters(setWriters);
   }, []);
   return (
     <>
@@ -35,6 +42,7 @@ const Home = () => {
             style={{ width: "15.333333%" }}
           >
             <h5 className="pb-3 pt-3 fw-bold">Top Writers</h5>
+            <TopWriters writers={topWriters} />
           </Col>
         </Row>
       </Paper>
