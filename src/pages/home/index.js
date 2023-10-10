@@ -34,7 +34,7 @@ const Home = () => {
             className="books-grid-padding"
             style={{ width: "15.333333%" }}
           >
-            Hello world
+            <h5 className="pb-3 pt-3 fw-bold">Top Writers</h5>
           </Col>
         </Row>
       </Paper>
