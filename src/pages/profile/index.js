@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Paper from "@/layout/paper";
 import SettingSection from "@/components/profile/index";
 import { Row, Col } from "react-bootstrap";
+import Section from "@/components/profile/section";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState(false);
@@ -48,7 +49,7 @@ const Profile = () => {
             </div>
           </Col>
           <Col xs={12} md={8}>
-            <div>Hello world</div>
+            <Section />
           </Col>
         </Row>
       </Paper>
