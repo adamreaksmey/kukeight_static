@@ -96,7 +96,7 @@ const Home = () => {
             <hr />
             <ListGroup>
               {recommendedBooks.slice(0, 6).map((data, index) => (
-                <ListGroupItem className="bg-transparent" role="button" style={{ fontSize: "0.8rem"}}>
+                <ListGroupItem className="bg-transparent" role="button" style={{ fontSize: "0.8rem"}} key={index}>
                   {index+1 + "." + data.title}
                 </ListGroupItem>
               ))}
