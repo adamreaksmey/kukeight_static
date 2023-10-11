@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import StarRatingComponent from "react-star-rating-component";
+import FourStarRatingComponent from "@/public/photos/icons/4starrating.png";
 import { Row, Col } from "react-bootstrap";
 
 const ContinueReading = ({ books }) => {
@@ -27,10 +27,12 @@ const ContinueReading = ({ books }) => {
               />
               <hr style={{ margin: "0.5rem 0" }} />
               <div className="fw-bold">{data.title}</div>
-              <StarRatingComponent
-                name="Books rating"
-                value={data.rating}
-                starColor="#CD5C08"
+              <Image
+                src={FourStarRatingComponent.src}
+                width={100}
+                height={16}
+                className="logo-img"
+                alt={data.rating}
               />
             </Col>
           ))}
