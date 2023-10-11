@@ -1,8 +1,8 @@
 import React from "react";
-import StarRatingComponent from "react-star-rating-component";
 import Upload from "@/public/photos/icons/upload.png";
 import Image from "next/image";
 import { Dropdown } from "react-bootstrap";
+import FourStarRatingComponent from "@/public/photos/icons/4starrating.png";
 
 const Recommendation = (props) => {
   const { recommendedBooks } = props;
@@ -55,10 +55,12 @@ const Recommendation = (props) => {
             />
             <hr style={{ margin: "0.5rem 0" }} />
             <div className="fw-bold">{data.title}</div>
-            <StarRatingComponent
-              name={"Books rating"}
-              value={data.rating}
-              starColor={"#CD5C08"}
+            <Image
+              src={FourStarRatingComponent.src}
+              width={100}
+              height={16}
+              className="logo-img"
+              alt={data.rating}
             />
           </div>
         ))}
