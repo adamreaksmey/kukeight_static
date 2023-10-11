@@ -59,5 +59,9 @@
   flex: 0 0 !important;
 }
 
+.fs-7 {
+  font-size: 0.9rem;
+}
+
 @import url("./layout/index.css");
 @import url("./home/index.css");
