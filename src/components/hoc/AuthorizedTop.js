@@ -16,7 +16,7 @@ const TopIsAuthorized = (WrappedComponent, UnauthorizedComponent) => {
         }
         const checkIfLoggedOut = foundUser?.user_is_loggedout;
         setAuthorized(checkIfLoggedOut);
-    })
+    }, []);
 
     if (authorized || !userExistsInLocal) {
       return <UnauthorizedComponent {...props} />;
