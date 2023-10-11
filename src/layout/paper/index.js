@@ -7,7 +7,7 @@ const Paper = ({ children }) => {
   const [showTopBar, setShowTopBar] = useState(false);
   useEffect(() => {
     scroll(setShowTopBar);
-  });
+  }, []);
   return (
     <>
       <TopBar />
