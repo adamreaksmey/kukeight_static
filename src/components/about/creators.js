@@ -48,7 +48,7 @@ const Creators = () => {
             </h6>
             <hr className="w-50" />
             <div>
-              I'm BUNTHA Somavottey, a part of KUKEight, a platform where you
+              I am BUNTHA Somavottey, a part of KUKEight, a platform where you
               can explore so many adventurous things in your dreaming universe.
               If being a container to receive what you think and how you feel, I
               will sacrifice my own subconsciousness to store your amazing
