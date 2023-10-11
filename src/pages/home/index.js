@@ -89,7 +89,7 @@ const Home = () => {
 
           <Col
             xs={1}
-            className="books-grid-padding"
+            className="books-grid-padding pb-3"
             style={{ width: "15.333333%" }}
           >
             <h5 className="pt-3 fw-bold">Top Searches</h5>
