@@ -38,15 +38,13 @@ const Profile = () => {
         <Row>
           <Col xs={6} md={4}>
             <div>
-              <div>
-                {settingsSections.map((section) => (
-                  <SettingSection
-                    key={section.tabName}
-                    activateTab={activateTab}
-                    {...section}
-                  />
-                ))}
-              </div>
+              {settingsSections.map((section) => (
+                <SettingSection
+                  key={section.tabName}
+                  activateTab={activateTab}
+                  {...section}
+                />
+              ))}
             </div>
           </Col>
           <Col xs={12} md={8}>
