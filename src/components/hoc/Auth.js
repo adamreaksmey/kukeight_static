@@ -13,7 +13,7 @@ const Auth = (WrappedComponent) => {
       if (!checkIfLoggedOut && foundUser && router.asPath == "/"){
         router.push("/home");
       }
-    }, []);
+    }, [router]);
     return <WrappedComponent {...props} />;
   };
   return Wrapper;
