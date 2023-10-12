@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Tilt+Neon&display=swap');
+
 .signup-logo {
   background-color: #fdf5e642;
   height: 100vh;
 }
 
-/* .signup-col {
-  position: relative;
-  top: 29vh;
-  left: 8vw;
-  height: 100%;
-} */
+.title-font {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 1.5rem;
+}
 
 .highlighted {
   background-color: #ead7bb;
