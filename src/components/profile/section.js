@@ -6,6 +6,7 @@ import getImageNameFromSrc from "@/components/functions/imageName";
 import Profile from "@/components/profile/sections/profile";
 import Notification from "@/components/profile/sections/notification";
 import MemberShip from "@/components/profile/sections/membership";
+import Security from "@/components/profile/sections/security";
 
 const Section = (props) => {
   const { message, activeTab } = props;
@@ -18,7 +19,8 @@ const Section = (props) => {
   const tabComponents = {
     profile: <Profile />,
     notification: <Notification />,
-    membership: <MemberShip />
+    membership: <MemberShip />,
+    security: <Security />,
   };
 
   useEffect(() => {
