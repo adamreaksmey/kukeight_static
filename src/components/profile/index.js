@@ -14,7 +14,7 @@ const SettingSection = (props) => {
         fireTabActivation(tabName);
       }}
     >
-      <h4 className="fw-bold">{title}</h4>
+      <h4 className="fw-bold title-font">{title}</h4>
       <div className="fs-7">{description}</div>
     </div>
   );

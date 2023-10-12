@@ -81,7 +81,7 @@ const Section = (props) => {
         </Col>
         <Col xs={11} md={7} className="d-flex align-items-center">
           <div>
-            <h4>Upload a new profile photo</h4>
+            <h4 className="title-font">Upload a new profile photo</h4>
             <div>{imageSrc.name}</div>
           </div>
         </Col>
