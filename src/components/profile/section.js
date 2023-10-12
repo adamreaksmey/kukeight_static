@@ -4,6 +4,7 @@ import Unknown from "@/public/photos/creators/unknown.jpeg";
 import { Button, Row, Col } from "react-bootstrap";
 import getImageNameFromSrc from "@/components/functions/imageName";
 import Profile from "@/components/profile/sections/profile";
+import Notification from "@/components/profile/sections/notification";
 
 const Section = (props) => {
   const { message, activeTab } = props;
@@ -15,6 +16,7 @@ const Section = (props) => {
   const imageInputRef = useRef();
   const tabComponents = {
     profile: <Profile />,
+    notification: <Notification />
   };
 
   useEffect(() => {
