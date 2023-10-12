@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 import Section from "@/components/profile/section";
 
 const Profile = () => {
-  const [activeTab, setActiveTab] = useState(false);
+  const [activeTab, setActiveTab] = useState("profile");
   const activateTab = (arg) => {
     console.log(arg);
   };
@@ -49,7 +49,7 @@ const Profile = () => {
             </div>
           </Col>
           <Col xs={12} md={8}>
-            <Section />
+            <Section activeTab={activeTab}/>
           </Col>
         </Row>
       </Paper>

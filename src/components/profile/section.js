@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Unknown from "@/public/photos/creators/unknown.jpeg";
 import { Button, Row, Col } from "react-bootstrap";
 import getImageNameFromSrc from "@/components/functions/imageName";
+import Profile from "@/components/profile/sections/profile";
 
 const Section = (props) => {
-  const { message } = props;
+  const { message, activeTab } = props;
   const [imageSrc, setImageSrc] = useState({
     image: "",
     name: "",
   });
+
+  const imageInputRef = useRef();
+  const tabComponents = {
+    profile: <Profile />,
+  };
 
   useEffect(() => {
     const storedImage = localStorage.getItem("profile-pic");
@@ -35,6 +41,29 @@ const Section = (props) => {
         });
     }
   }, []);
+
+  const handleImageUpload = () => {
+    imageInputRef.current.click();
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      const base64String = reader.result;
+      setImageSrc({
+        image: base64String,
+        name: file.name,
+      });
+      localStorage.setItem("profile-pic", base64String);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <>
       <Row
@@ -49,14 +78,33 @@ const Section = (props) => {
             height={170}
             alt={"image"}
           />
-          {console.log(imageSrc)}
         </Col>
-        <Col xs={12} md={8} className="d-flex align-items-center">
+        <Col xs={11} md={7} className="d-flex align-items-center">
           <div>
             <h4>Upload a new profile photo</h4>
+            <div>{imageSrc.name}</div>
+          </div>
+        </Col>
+        <Col xs={3} md={2} className="d-flex align-items-center">
+          <div>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="d-none"
+              ref={imageInputRef}
+            />
+            <Button
+              variant="secondary"
+              onClick={handleImageUpload}
+              style={{ backgroundColor: "transparent" }}
+            >
+              Upload Photo
+            </Button>
           </div>
         </Col>
       </Row>
+      {tabComponents[activeTab]}
     </>
   );
 };
