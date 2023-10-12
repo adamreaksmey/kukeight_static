@@ -79,7 +79,8 @@ const SectionTwo = (props) => {
                 Select a language
               </option>
               <option value="cambodia">Khmer</option>
-              <option value="others">Others</option>
+              <option value="english">English</option>
+              <option valuee="others">Others</option>
             </Form.Select>
           </Form.Group>
 

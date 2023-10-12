@@ -5,21 +5,27 @@ import { useRouter } from "next/router";
 import TopIsAuthorized from "@/components/hoc/AuthorizedTop";
 import Authorized from "@/layout/topbar/authorized";
 import Unauthorized from "@/layout/topbar/unauthorized";
+import { useEffect, useState } from "react";
 
 const TopBar = (props) => {
   const { switchMode } = props;
-  const router = useRouter();
+  const [authid, setAuthId] = useState("");
 
   const switchBackgroundMode = () => {
     switchMode();
   };
+
+  useEffect(() => {
+    const authUserId = localStorage.getItem("auth-user-id");
+    if (authUserId) setAuthId(authUserId);
+  });
 
   const Authorization = TopIsAuthorized(Authorized, Unauthorized);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top position-fixed w-100">
       <div className="container">
-        <Link href="/" className="navbar-brand">
+        <Link href={authid ? "/home" : "/"} className="navbar-brand">
           <Image
             src={Logo.src}
             width={60}
@@ -40,9 +46,7 @@ const TopBar = (props) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <Authorization
-          switchBackgroundMode={switchBackgroundMode}
-        />
+        <Authorization switchBackgroundMode={switchBackgroundMode} />
       </div>
     </nav>
   );
