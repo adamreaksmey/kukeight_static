@@ -7,14 +7,14 @@ import Section from "@/components/profile/section";
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("profile");
   const activateTab = (arg) => {
-    console.log(arg);
+    setActiveTab(arg);
   };
 
   const settingsSections = [
     {
       title: "Account Setting",
       description: "Details about your personal information.",
-      tabName: "account",
+      tabName: "profile",
     },
     {
       title: "Notification Setting",
@@ -43,13 +43,14 @@ const Profile = () => {
                 <SettingSection
                   key={section.tabName}
                   activateTab={activateTab}
+                  isActive={section.tabName == activeTab}
                   {...section}
                 />
               ))}
             </div>
           </Col>
           <Col xs={12} md={8}>
-            <Section activeTab={activeTab}/>
+            <Section activeTab={activeTab} />
           </Col>
         </Row>
       </Paper>
