@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
   const [showTopBar, setShowTopBar] = useState(false);
 
   useEffect(() => {
-    scroll(setShowTopBar)
+    scroll(setShowTopBar);
   }, []);
 
   useEffect(() => {
