@@ -18,6 +18,9 @@ const MainLayout = ({ children }) => {
 
   useEffect(() => {
     let value = localStorage.getItem("mode");
+    if (!value) {
+      localStorage.setItem("mode", "night");
+    }
     setLocalStorageMode(value);
     setMode(value || "night");
   }, []);
