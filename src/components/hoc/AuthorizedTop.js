@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const TopIsAuthorized = (WrappedComponent, UnauthorizedComponent) => {
   const Authorized = (props) => {
-    const { showAuthorized, ...rest } = props;
+    // const { showAuthorized, ...rest } = props;
     const [authorized, setAuthorized] = useState(false);
     const [userExistsInLocal, setUserExistsInLocal] = useState(false);
 
