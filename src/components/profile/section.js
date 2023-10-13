@@ -14,6 +14,14 @@ const Section = (props) => {
     image: "",
     name: "",
   });
+  const [usersData, setUsersData] = useState({
+    auth_id: "",
+    allUsers: [],
+    singleUser: {},
+  });
+  const [ImageExists, setImageExists] = useState("");
+
+  // test image upload
 
   const imageInputRef = useRef();
   const tabComponents = {
@@ -24,29 +32,33 @@ const Section = (props) => {
   };
 
   useEffect(() => {
-    const storedImage = localStorage.getItem("profile-pic");
-    if (storedImage) {
+    const getUsersInfo = JSON.parse(
+      localStorage.getItem("kukeight-authorized-users")
+    );
+    const userId = localStorage.getItem("auth-user-id");
+    const userFound = getUsersInfo.find((data) => data.id == userId);
+    setUsersData((prev) => ({
+      auth_id: userId,
+      allUsers: getUsersInfo,
+      singleUser: userFound,
+    }));
+
+    const foundImage = userFound?.image;
+    setImageExists(foundImage);
+  }, []);
+
+  useEffect(() => {
+    const UserExists = usersData.allUsers.find(
+      (data) => data.id == usersData.auth_id
+    );
+    const ImageExists = UserExists?.image.url;
+    if (ImageExists) {
       setImageSrc((prev) => ({
-        image: storedImage,
+        image: ImageExists,
         name: getImageNameFromSrc(Unknown.src),
       }));
-    } else {
-      fetch(Unknown.src)
-        .then((response) => response.blob())
-        .then((blob) => {
-          const reader = new FileReader();
-          reader.onloadend = function () {
-            const base64data = reader.result;
-            localStorage.setItem("profile-pic", base64data);
-            setImageSrc({
-              image: base64data,
-              name: getImageNameFromSrc(Unknown.src),
-            });
-          };
-          reader.readAsDataURL(blob);
-        });
     }
-  }, []);
+  }, [ImageExists]);
 
   const handleImageUpload = () => {
     imageInputRef.current.click();
@@ -62,7 +74,17 @@ const Section = (props) => {
         image: base64String,
         name: file.name,
       });
-      localStorage.setItem("profile-pic", base64String);
+      const user = usersData.allUsers.find(
+        (data) => data.id == usersData.auth_id
+      );
+      user["image"] = {
+        name: file.name,
+        url: base64String
+      };
+      localStorage.setItem(
+        "kukeight-authorized-users",
+        JSON.stringify(usersData.allUsers)
+      );
     };
 
     if (file) {
@@ -88,7 +110,7 @@ const Section = (props) => {
         <Col xs={11} md={7} className="d-flex align-items-center">
           <div>
             <h4 className="title-font">Upload a new profile photo</h4>
-            <div>{imageSrc.name}</div>
+            <div>{usersData.singleUser.image?.name}</div>
           </div>
         </Col>
         <Col xs={3} md={2} className="d-flex align-items-center">

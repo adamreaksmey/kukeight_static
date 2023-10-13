@@ -12,6 +12,10 @@ const EditProfile = () => {
     confirm_password: "",
     language: "",
     user_type: "",
+    image: {
+      name: "",
+      url: "",
+    },
     user_is_loggedout: false,
   });
   const [showModal, setShowModal] = useState({
@@ -28,7 +32,6 @@ const EditProfile = () => {
     setUsers(getUsers);
     const authId = localStorage.getItem("auth-user-id");
     const userExists = getUsers.find((data) => data.id == authId);
-    console.log(userExists);
     setForm(userExists);
   }, []);
 

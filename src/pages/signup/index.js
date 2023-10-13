@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import BasicModal from "@/components/modal/index";
 import { BasicLayout } from "@/layout/library";
 import Logo from "@/public/photos/logo.png";
+import Unknown from "@/public/photos/creators/unknown.jpeg";
 import Quotes from "@/components/functions/quotes";
 import Auth from "@/components/hoc/Auth";
 import { useRouter } from "next/router";
@@ -20,6 +21,10 @@ const SignupPage = (props) => {
     confirm_password: "",
     language: "",
     user_type: "",
+    image: {
+      name: "",
+      url: ""
+    },
     user_is_loggedout: false,
   });
   const [quotes, setQuotes] = useState();
@@ -36,6 +41,22 @@ const SignupPage = (props) => {
     if (Quotes) {
       setQuotes(Quotes);
     }
+    fetch(Unknown.src)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        const base64data = reader.result;
+        setForm((prev) => ({
+          ...prev,
+          image: {
+            name: "Unknown",
+            url: base64data
+          }
+        }))
+      };
+      reader.readAsDataURL(blob);
+    });
   }, []);
 
   const logoImage = Logo.src;
