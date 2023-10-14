@@ -21,7 +21,7 @@ const MainLayout = ({ children }) => {
     if (!value) {
       localStorage.setItem("mode", "night");
     }
-    setLocalStorageMode(value);
+    setLocalStorageMode("night");
     setMode(value || "night");
   }, []);
 
