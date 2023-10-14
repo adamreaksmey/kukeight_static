@@ -3,6 +3,7 @@ import Paper from "@/layout/paper";
 import SettingSection from "@/components/profile/index";
 import { Row, Col } from "react-bootstrap";
 import Section from "@/components/profile/section";
+import Auth from "@/components/hoc/Auth";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("profile");
@@ -58,4 +59,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Auth(Profile);

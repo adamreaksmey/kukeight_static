@@ -96,7 +96,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="username"
                   type="text"
-                  value={form.username}
+                  value={form?.username}
                   onChange={handleFormChange}
                   required
                 />
@@ -108,7 +108,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="email"
                   type="email"
-                  value={form.email}
+                  value={form?.email}
                   onChange={handleFormChange}
                   required
                 />
@@ -121,7 +121,7 @@ const EditProfile = () => {
                 <Form.Label>Language:</Form.Label>
                 <Form.Select
                   name="language"
-                  value={form.language}
+                  value={form?.language}
                   onChange={handleFormChange}
                   required
                 >
@@ -139,7 +139,7 @@ const EditProfile = () => {
                 <Form.Label>You are a ...:</Form.Label>
                 <Form.Select
                   name="user_type"
-                  value={form.user_type}
+                  value={form?.user_type}
                   onChange={handleFormChange}
                   required
                 >
@@ -159,7 +159,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="password"
                   type="password"
-                  value={form.password}
+                  value={form?.password}
                   onChange={handleFormChange}
                   required
                 />
@@ -171,7 +171,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="confirm_password"
                   type="password"
-                  value={form.confirm_password}
+                  value={form?.confirm_password}
                   onChange={handleFormChange}
                   required
                 />
@@ -185,7 +185,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="age"
                   type="number"
-                  value={form.age}
+                  value={form?.age}
                   onChange={handleFormChange}
                   required
                 />
@@ -197,7 +197,7 @@ const EditProfile = () => {
                 <Form.Control
                   name="country"
                   type="text"
-                  value={form.country}
+                  value={form?.country}
                   onChange={handleFormChange}
                   required
                 />

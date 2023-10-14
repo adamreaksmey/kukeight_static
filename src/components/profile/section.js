@@ -110,7 +110,7 @@ const Section = (props) => {
         <Col xs={11} md={7} className="d-flex align-items-center">
           <div>
             <h4 className="title-font">Upload a new profile photo</h4>
-            <div>{usersData.singleUser.image?.name}</div>
+            <div>{usersData.singleUser?.image?.name}</div>
           </div>
         </Col>
         <Col xs={3} md={2} className="d-flex align-items-center">
