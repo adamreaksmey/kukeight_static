@@ -3,9 +3,11 @@ import Upload from "@/public/photos/icons/upload.png";
 import Image from "next/image";
 import { Dropdown } from "react-bootstrap";
 import FourStarRatingComponent from "@/public/photos/icons/4starrating.png";
+import { useRouter } from "next/router";
 
 const Recommendation = (props) => {
   const { recommendedBooks } = props;
+  const router = useRouter();
   return (
     <>
       <div className="pb-4 fw-bold d-flex">
@@ -45,7 +47,13 @@ const Recommendation = (props) => {
         style={{ whiteSpace: "nowrap" }}
       >
         {recommendedBooks?.map((data, index) => (
-          <div key={index} style={{ whiteSpace: "break-spaces" }}>
+          <div
+            key={index}
+            style={{ whiteSpace: "break-spaces" }}
+            onClick={() => {
+              router.push(`/book/${data.title}`);
+            }}
+          >
             <Image
               src={data.image}
               width={150}

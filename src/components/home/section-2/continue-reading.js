@@ -15,7 +15,10 @@ const ContinueReading = ({ books }) => {
   return (
     <div className="overflow-scroll" style={{ paddingLeft: "1.55rem" }}>
       {chunks.map((chunk, chunkIndex) => (
-        <Row key={chunkIndex} className="w-100 d-flex justify-content-center">
+        <Row
+          key={chunkIndex}
+          className="w-100 d-flex justify-content-center"
+        >
           {chunk.map((data, index) => (
             <Col key={index} className="nowidth-col">
               <Image
