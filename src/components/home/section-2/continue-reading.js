@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import FourStarRatingComponent from "@/public/photos/icons/4starrating.png";
 import { Row, Col } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 const ContinueReading = ({ books }) => {
   const booksPerChunk = 3;
@@ -9,18 +10,23 @@ const ContinueReading = ({ books }) => {
     return books.slice(index * booksPerChunk, (index + 1) * booksPerChunk);
   });
 
+  const router = useRouter();
+
   //   basically what this does is dividing objects to put into a new array based on the
   //   chunk size and how many arrays ( length: 4 ) should be created into a new array
 
   return (
     <div className="overflow-scroll" style={{ paddingLeft: "1.55rem" }}>
       {chunks.map((chunk, chunkIndex) => (
-        <Row
-          key={chunkIndex}
-          className="w-100 d-flex justify-content-center"
-        >
+        <Row key={chunkIndex} className="w-100 d-flex justify-content-center">
           {chunk.map((data, index) => (
-            <Col key={index} className="nowidth-col">
+            <Col
+              key={index}
+              className="nowidth-col"
+              onClick={() => {
+                router.push(`/book/${data.title}`);
+              }}
+            >
               <Image
                 src={data.image}
                 width={150}
