@@ -58,4 +58,4 @@ const Home = (props) => {
   );
 }
 
-export default AuthHoc(Home);
+export default Home;

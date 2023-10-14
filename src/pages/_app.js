@@ -4,8 +4,9 @@ import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MainLayout } from "@/layout/index";
 import { useEffect, useState } from "react";
+import AuthHoc from "@/components/hoc/Auth";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   const router = useRouter();
   const currentUrl = router.asPath;
   const [allAuthorizedUsers, setAllAuthorizedUsers] = useState("");
@@ -45,3 +46,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default AuthHoc(App);
