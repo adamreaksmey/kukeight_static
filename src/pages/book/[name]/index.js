@@ -7,7 +7,6 @@ import BookContents from "@/components/functions/books";
 
 const ReadBook = () => {
   const router = useRouter();
-  const [title, setTitle] = useState("");
   const [bookData, setBookData] = useState({
     cover: "",
     content: [],
@@ -25,8 +24,8 @@ const ReadBook = () => {
   return (
     <Paper>
       <HTMLFlipBook
-        width={550}
-        height={700}
+        width={300}
+        height={400}
         size="stretch"
         minWidth={315}
         maxWidth={1000}
@@ -46,13 +45,16 @@ const ReadBook = () => {
             ></div>
           }
         </div>
-        <div>
-          {bookData.content.map((data, index) => {
-            return (
-              <Page key={index} pageNum={index} content={data.page_content} />
-            );
-          })}
-        </div>
+
+          {bookData.content.map((data, index) => (
+            <Page
+              key={index}
+              pageNum={index}
+              content={data.page_content}
+              image={data.image}
+            />
+          ))}
+
       </HTMLFlipBook>
     </Paper>
   );

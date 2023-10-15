@@ -20,9 +20,9 @@
 }
 
 .book-page {
-  background-color: #D6D46D;
+  background-color: #d6d46d;
 }
 
-.book-cover {
-  background-image: url("../../../../public/photos/recommendation/fault-in-our-stars.jpeg");
+.page-rounded {
+  border-radius: 20px;
 }
