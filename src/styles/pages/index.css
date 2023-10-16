@@ -64,6 +64,17 @@
   font-size: 0.9rem;
 }
 
+.book-cover {
+  background-size: contain;
+  background-attachment: unset;
+  display: block;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: -20px 30px 39px 1px rgba(25, 10, 5, 1);
+}
+
 @import url("./layout/index.css");
 @import url("./home/index.css");
 @import url("./book/index.css");

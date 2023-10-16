@@ -12,10 +12,13 @@ const Page = React.forwardRef((props, ref) => {
       <h4>Chapter 1</h4>
       <hr />
       <div className="d-flex justify-content-center pb-3">
-        <Image width={400} height={300} alt={"image"} src={image} />
+        <Image width={200} height={200} alt={"image"} src={image} />
       </div>
 
-      <p className="pb-3" style={{ textAlign: "justify" }}>
+      <p
+        className="pb-3"
+        style={{ textAlign: "justify", fontSize: "0.9rem" }}
+      >
         {content}
       </p>
       <p>Page number: {pageNum + 1}</p>

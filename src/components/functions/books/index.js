@@ -21,6 +21,7 @@ const BookContents = (name) => {
       cover: CoverTheFaultInOurStars.src,
       content: TheFaultInOurStars(),
       author: "John Green",
+      description: `"The Fault in Our Stars" by John Green is a touching and profound book that delves into the lives of Hazel and Gus, two young cancer patients. It explores love, friendship, and the search for meaning in the face of mortality, leaving readers with a powerful and unforgettable experience."`,
     },
     the_book_thief: {
       cover: BookTheif.src,
