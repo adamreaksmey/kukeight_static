@@ -5,6 +5,7 @@ import HTMLFlipBook from "react-pageflip";
 import Page from "@/components/book/pages";
 import BookContents from "@/components/functions/books";
 import { Container, Row, Col } from "react-bootstrap";
+import Description from "@/components/book/pages/description";
 
 const ReadBook = () => {
   const router = useRouter();
@@ -18,7 +19,6 @@ const ReadBook = () => {
   useEffect(() => {
     const { name } = router.query;
     const getBookContents = BookContents(name);
-    console.log(getBookContents);
     setBookData({
       cover: getBookContents?.cover,
       content: getBookContents?.content || [],
@@ -32,20 +32,7 @@ const ReadBook = () => {
       <Container>
         <Row>
           <Col sm={4}>
-            <div>
-              <h2 className="title-font text-decoration-underline">
-                {router.query.name}
-              </h2>
-              <div className="d-inline-flex">
-                <div className="pe-2 title-font fs-6">Author:</div>
-                {bookData.author}
-              </div>
-              <div>
-              <hr />
-                <div className="title-font fs-6">Description: </div>
-                <code>{bookData.description}</code>
-              </div>
-            </div>
+            <Description router={router} bookData={bookData} />
           </Col>
           <Col sm={8}>
             <HTMLFlipBook

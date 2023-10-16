@@ -15,10 +15,7 @@ const Page = React.forwardRef((props, ref) => {
         <Image width={200} height={200} alt={"image"} src={image} />
       </div>
 
-      <p
-        className="pb-3"
-        style={{ textAlign: "justify", fontSize: "0.9rem" }}
-      >
+      <p className="pb-3" style={{ textAlign: "justify", fontSize: "0.9rem" }}>
         {content}
       </p>
       <p>Page number: {pageNum + 1}</p>
