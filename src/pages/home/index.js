@@ -11,7 +11,7 @@ import SectionThree from "@/components/home/section-3";
 import WS from "@/public/photos/writers/WS.jpeg";
 import BookOfTheYear from "@/public/photos/recommendation/fault-in-our-stars.jpeg";
 
-const Home = () => {
+export default function Home() {
   const [recommendedBooks, setRecommendedBooks] = useState([]);
   const [topWriters, setTopWriters] = useState([]);
 
@@ -106,5 +106,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;
