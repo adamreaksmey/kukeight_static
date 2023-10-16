@@ -18,7 +18,7 @@ const Auth = (WrappedComponent) => {
       else if (!authUserId) {
         router.push("/")
       }
-    }, []);
+    }, [router]);
     return <WrappedComponent {...props} />;
   };
   return Wrapper;
