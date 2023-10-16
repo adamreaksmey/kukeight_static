@@ -67,6 +67,7 @@
 .book-cover {
   background-size: contain;
   background-attachment: unset;
+  background-repeat: no-repeat;
   display: block;
   min-height: 100%;
   overflow: hidden;
