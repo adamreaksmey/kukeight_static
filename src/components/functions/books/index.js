@@ -19,7 +19,7 @@ const BookContents = (name) => {
       cover: CoverTheFaultInOurStars.src,
       content: TheFaultInOurStars(),
     },
-    book_thief: {
+    the_book_thief: {
       cover: BookTheif.src,
       content: "",
     },
