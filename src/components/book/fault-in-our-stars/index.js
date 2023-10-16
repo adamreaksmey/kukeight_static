@@ -168,43 +168,41 @@ const TheFaultInOurStars = () => {
       image: CoverTheFaultInOurStars.src,
     },
     {
-      page_content: `Late in the winter of my seventeenth year, my mother decided I was depressed,
-            presumably because I rarely left the house, spent quite a lot of time in bed, read the same
-            book over and over, ate infrequently, and devoted quite a bit of my abundant free time to
-            thinking about death.
-            Whenever you read a cancer booklet or website or whatever, they always list
-            depression among the side effects of cancer. But, in fact, depression is not a side effect of
-            cancer. Depression is a side effect of dying. (Cancer is also a side effect of dying. Almost
-            everything is, really.) But my mom believed I required treatment, so she took me to see
-            my Regular Doctor Jim, who agreed that I was veritably swimming in a paralyzing and
-            totally clinical depression, and that therefore my meds should be adjusted and also I
-            should attend a weekly Support Group.
-            This Support Group featured a rotating cast of characters in various states of tumordriven unwellness. Why did the cast rotate? A side effect of dying.
-            The Support Group, of course, was depressing as hell. It met every Wednesday in the
-            basement of a stone-walled Episcopal church shaped like a cross. We all sat in a circle
-            right in the middle of the cross, where the two boards would have met, where the heart of
-            Jesus would have been.
-            I noticed this because Patrick, the Support Group Leader and only person over
-            eighteen in the room, talked about the heart of Jesus every freaking meeting, all about how
-            we, as young cancer survivors, were sitting right in Christ’s very sacred heart and
-            whatever.
-            So here’s how it went in God’s heart: The six or seven or ten of us walked/wheeled
-            in, grazed at a decrepit selection of cookies and lemonade, sat down in the Circle of Trust,
-            and listened to Patrick recount for the thousandth time his depressingly miserable life
-            story—how he had cancer in his balls and they thought he was going to die but he didn’t
-            die and now here he is, a full-grown adult in a church basement in the 137th nicest city in
-            America, divorced, addicted to video games, mostly friendless, eking out a meager living
-            by exploiting his cancertastic past, slowly working his way toward a master’s degree that
-            will not improve his career prospects, waiting, as we all do, for the sword of Damocles to
-            give him the relief that he escaped lo those many years ago when cancer took both of his
-            nuts but spared what only the most generous soul would call his life.
-            AND YOU TOO MIGHT BE SO LUCKY!
-            Then we introduced ourselves: Name. Age. Diagnosis. And how we’re doing today.
-            I’m Hazel, I’d say when they’d get to me. Sixteen. Thyroid originally but with an
-            impressive and long-settled satellite colony in my lungs. And I’m doing okay.
-            Once we got around the circle, Patrick always asked if anyone wanted to share. And
-            then began the circle jerk of support: everyone talking about fighting and battling and
-            winning and shrinking and scanning. To be fair to Patrick, he let us talk about dying, too.`,
+      page_content: `“Yes.”
+      “I fear oblivion,” he said without a moment’s pause. “I fear it like the proverbial
+      blind man who’s afraid of the dark.”
+      “Too soon,” Isaac said, cracking a smile.
+      “Was that insensitive?” Augustus asked. “I can be pretty blind to other people’s
+      feelings.”
+      Isaac was laughing, but Patrick raised a chastening finger and said, “Augustus,
+      please. Let’s return to you and your struggles. You said you fear oblivion?”
+      “I did,” Augustus answered.
+      Patrick seemed lost. “Would, uh, would anyone like to speak to that?”
+      I hadn’t been in proper school in three years. My parents were my two best friends.
+      My third best friend was an author who did not know I existed. I was a fairly shy person—
+      not the hand-raising type.
+      And yet, just this once, I decided to speak. I half raised my hand and Patrick, his
+      delight evident, immediately said, “Hazel!” I was, I’m sure he assumed, opening up.
+      Becoming Part Of The Group.
+      I looked over at Augustus Waters, who looked back at me. You could almost see
+      through his eyes they were so blue. “There will come a time,” I said, “when all of us are
+      dead. All of us. There will come a time when there are no human beings remaining to
+      remember that anyone ever existed or that our species ever did anything. There will be no
+      one left to remember Aristotle or Cleopatra, let alone you. Everything that we did and
+      built and wrote and thought and discovered will be forgotten and all of this”—I gestured
+      encompassingly—“will have been for naught. Maybe that time is coming soon and maybe
+      it is millions of years away, but even if we survive the collapse of our sun, we will not
+      survive forever. There was time before organisms experienced consciousness, and there
+      will be time after. And if the inevitability of human oblivion worries you, I encourage you
+      to ignore it. God knows that’s what everyone else does.”
+      I’d learned this from my aforementioned third best friend, Peter Van Houten, the
+      reclusive author of An Imperial Affliction, the book that was as close a thing as I had to a
+      Bible. Peter Van Houten was the only person I’d ever come across who seemed to (a)
+      understand what it’s like to be dying, and (b) not have died.
+      After I finished, there was quite a long period of silence as I watched a smile spread
+      all the way across Augustus’s face—not the little crooked smile of the boy trying to be
+      sexy while he stared at me, but his real smile, too big for his face. “Goddamn,” Augustus
+      said quietly. “Aren’t you something else.”`,
       image: CoverTheFaultInOurStars.src,
     },
     {
