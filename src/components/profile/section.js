@@ -58,7 +58,7 @@ const Section = (props) => {
         name: getImageNameFromSrc(Unknown.src),
       }));
     }
-  }, [ImageExists]);
+  }, [ImageExists, usersData.allUsers, usersData.auth_id]);
 
   const handleImageUpload = () => {
     imageInputRef.current.click();
@@ -79,7 +79,7 @@ const Section = (props) => {
       );
       user["image"] = {
         name: file.name,
-        url: base64String
+        url: base64String,
       };
       localStorage.setItem(
         "kukeight-authorized-users",
