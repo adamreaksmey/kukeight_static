@@ -24,12 +24,6 @@ const Section = (props) => {
   // test image upload
 
   const imageInputRef = useRef();
-  const tabComponents = {
-    profile: <Profile />,
-    notification: <Notification />,
-    membership: <MemberShip />,
-    security: <Security />,
-  };
 
   useEffect(() => {
     const getUsersInfo = JSON.parse(
@@ -92,49 +86,22 @@ const Section = (props) => {
     }
   };
 
-  return (
-    <>
-      <Row
-        className="p-4 rounded mb-1 logo-img"
-        style={{ background: "#6A9C89" }}
-      >
-        <Col xs={6} md={3}>
-          <Image
-            className="img-logo rounded-circle"
-            src={imageSrc.image}
-            width={170}
-            height={170}
-            alt={"image"}
-          />
-        </Col>
-        <Col xs={11} md={7} className="d-flex align-items-center">
-          <div>
-            <h4 className="title-font">Upload a new profile photo</h4>
-            <div>{usersData.singleUser?.image?.name}</div>
-          </div>
-        </Col>
-        <Col xs={3} md={2} className="d-flex align-items-center">
-          <div>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="d-none"
-              ref={imageInputRef}
-            />
-            <Button
-              variant="secondary"
-              onClick={handleImageUpload}
-              style={{ backgroundColor: "transparent" }}
-            >
-              Upload Photo
-            </Button>
-          </div>
-        </Col>
-      </Row>
-      {tabComponents[activeTab]}
-    </>
-  );
+  const tabComponents = {
+    profile: (
+      <Profile
+        imageSrc={imageSrc}
+        usersData={usersData}
+        handleImageChange={handleImageChange}
+        imageInputRef={imageInputRef}
+        handleImageUpload={handleImageUpload}
+      />
+    ),
+    notification: <Notification />,
+    membership: <MemberShip />,
+    security: <Security />,
+  };
+
+  return <>{tabComponents[activeTab]}</>;
 };
 
 export default Section;

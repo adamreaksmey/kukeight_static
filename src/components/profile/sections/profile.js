@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import BasicModal from "@/components/modal/index";
+import Image from "next/image";
 
-const EditProfile = () => {
+const EditProfile = (props) => {
+  const {
+    imageSrc,
+    usersData,
+    handleImageChange,
+    imageInputRef,
+    handleImageUpload,
+  } = props;
   const [form, setForm] = useState({
     email: "",
     username: "",
@@ -78,6 +86,48 @@ const EditProfile = () => {
         title={showModal.title}
         body={showModal.body}
       />
+      <Row
+        className="p-4 rounded mb-1 logo-img"
+        style={{ background: "#6A9C89" }}
+      >
+        <Col xs={6} md={3}>
+          <Image
+            className="img-logo rounded-circle"
+            src={imageSrc.image}
+            width={170}
+            height={170}
+            alt={"image"}
+          />
+        </Col>
+        <Col xs={11} md={7} className="d-flex align-items-center">
+          <div>
+            <h4 className="title-font">Upload a new profile photo</h4>
+            <div>{usersData.singleUser?.image?.name}</div>
+          </div>
+        </Col>
+        <Col xs={3} md={2} className="d-flex align-items-center">
+          <div>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(event) => {
+                handleImageChange(event);
+              }}
+              className="d-none"
+              ref={imageInputRef}
+            />
+            <Button
+              variant="secondary"
+              onClick={(event) => {
+                handleImageUpload(event);
+              }}
+              style={{ backgroundColor: "transparent" }}
+            >
+              Upload Photo
+            </Button>
+          </div>
+        </Col>
+      </Row>
       <Row
         className="p-4 rounded mb-1 logo-img"
         style={{ background: "#6A9C89" }}
