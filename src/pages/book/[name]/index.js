@@ -23,6 +23,11 @@ const ReadBook = () => {
 
   return (
     <Paper>
+      <div>
+        <h2 className="title-font text-decoration-underline">
+          {router.query.name}
+        </h2>
+      </div>
       <HTMLFlipBook
         width={300}
         height={400}
@@ -46,15 +51,14 @@ const ReadBook = () => {
           }
         </div>
 
-          {bookData.content.map((data, index) => (
-            <Page
-              key={index}
-              pageNum={index}
-              content={data.page_content}
-              image={data.image}
-            />
-          ))}
-
+        {bookData.content.map((data, index) => (
+          <Page
+            key={index}
+            pageNum={index}
+            content={data.page_content}
+            image={data.image}
+          />
+        ))}
       </HTMLFlipBook>
     </Paper>
   );
