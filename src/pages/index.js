@@ -9,7 +9,7 @@ import Section4 from "@/components/top/section4";
 import Auth from "@/components/top/section1/loginout";
 import AuthHoc from "@/components/hoc/Auth";
 
-const Home = (props) => {
+export default function Home(props) {
   const mode = useContext(LayoutContext);
   const { style, users } = props;
 
@@ -56,7 +56,4 @@ const Home = (props) => {
       </div>
     </>
   );
-};
-
-Home.displayName = "home";
-export default Home;
+}
