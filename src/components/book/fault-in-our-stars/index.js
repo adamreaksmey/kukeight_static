@@ -124,7 +124,47 @@ const TheFaultInOurStars = () => {
       image: CoverTheFaultInOurStars.src,
     },
     {
-      page_content: ``,
+      page_content: `I pulled out my phone and clicked it so it would display the time: 4:59. The circle
+      filled in with the unlucky twelve-to-eighteens, and then Patrick started us out with the
+      serenity prayer: God, grant me the serenity to accept the things I cannot change, the
+      courage to change the things I can, and the wisdom to know the difference. The guy was
+      still staring at me. I felt rather blushy.
+      Finally, I decided that the proper strategy was to stare back. Boys do not have a
+      monopoly on the Staring Business, after all. So I looked him over as Patrick
+      acknowledged for the thousandth time his ball-lessness etc., and soon it was a staring
+      contest. After a while the boy smiled, and then finally his blue eyes glanced away. When
+      he looked back at me, I flicked my eyebrows up to say, I win.
+      He shrugged. Patrick continued and then finally it was time for the introductions.
+      “Isaac, perhaps you’d like to go first today. I know you’re facing a challenging time.”
+      “Yeah,” Isaac said. “I’m Isaac. I’m seventeen. And it’s looking like I have to get
+      surgery in a couple weeks, after which I’ll be blind. Not to complain or anything because I
+      know a lot of us have it worse, but yeah, I mean, being blind does sort of suck. My
+      girlfriend helps, though. And friends like Augustus.” He nodded toward the boy, who now
+      had a name. “So, yeah,” Isaac continued. He was looking at his hands, which he’d folded
+      into each other like the top of a tepee. “There’s nothing you can do about it.”
+      “We’re here for you, Isaac,” Patrick said. “Let Isaac hear it, guys.” And then we all,
+      in a monotone, said, “We’re here for you, Isaac.”
+      Michael was next. He was twelve. He had leukemia. He’d always had leukemia. He
+      was okay. (Or so he said. He’d taken the elevator.)
+      Lida was sixteen, and pretty enough to be the object of the hot boy’s eye. She was a
+      regular—in a long remission from appendiceal cancer, which I had not previously known
+      existed. She said—as she had every other time I’d attended Support Group—that she felt
+      strong, which felt like bragging to me as the oxygen-drizzling nubs tickled my nostrils.
+      There were five others before they got to him. He smiled a little when his turn came.
+      His voice was low, smoky, and dead sexy. “My name is Augustus Waters,” he said. “I’m
+      seventeen. I had a little touch of osteosarcoma a year and a half ago, but I’m just here
+      today at Isaac’s request.”
+      “And how are you feeling?” asked Patrick.
+      “Oh, I’m grand.” Augustus Waters smiled with a corner of his mouth. “I’m on a roller
+      coaster that only goes up, my friend.”
+      When it was my turn, I said, “My name is Hazel. I’m sixteen. Thyroid with mets in
+      my lungs. I’m okay.”
+      The hour proceeded apace: Fights were recounted, battles won amid wars sure to be
+      lost; hope was clung to; families were both celebrated and denounced; it was agreed that
+      friends just didn’t get it; tears were shed; comfort proffered. Neither Augustus Waters nor
+      I spoke again until Patrick said, “Augustus, perhaps you’d like to share your fears with the
+      group.”
+      “My fears?”`,
       image: CoverTheFaultInOurStars.src,
     },
     {
