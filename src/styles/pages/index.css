@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Tilt+Neon&display=swap");
 
 .signup-logo {
   background-color: #fdf5e642;
@@ -6,8 +6,8 @@
 }
 
 .title-font {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Tilt Neon', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Tilt Neon", sans-serif;
   font-size: 1.5rem;
 }
 
@@ -66,3 +66,4 @@
 
 @import url("./layout/index.css");
 @import url("./home/index.css");
+@import url("./book/index.css");

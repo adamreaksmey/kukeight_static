@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Auth from "@/components/hoc/Auth";
 import Paper from "@/layout/paper/index";
 import Recommended from "@/components/functions/home/recommendation";
 import Image from "next/image";
@@ -108,4 +107,4 @@ const Home = () => {
   );
 };
 
-export default Auth(Home);
+export default Home;
