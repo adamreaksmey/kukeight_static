@@ -5,12 +5,17 @@ import { Row, Col } from "react-bootstrap";
 import Section from "@/components/profile/section";
 
 const Profile = () => {
-  const [activeTab, setActiveTab] = useState("profile");
+  const [activeTab, setActiveTab] = useState("social_profile");
   const activateTab = (arg) => {
     setActiveTab(arg);
   };
 
   const settingsSections = [
+    {
+      title: "Profile Setting",
+      description: "Details about your public profile",
+      tabName: "social_profile"
+    },
     {
       title: "Account Setting",
       description: "Details about your personal information.",

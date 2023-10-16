@@ -7,6 +7,7 @@ import Profile from "@/components/profile/sections/profile";
 import Notification from "@/components/profile/sections/notification";
 import MemberShip from "@/components/profile/sections/membership";
 import Security from "@/components/profile/sections/security";
+import SocialProfile from "@/components/profile/sections/socialprofile";
 
 const Section = (props) => {
   const { message, activeTab } = props;
@@ -99,6 +100,7 @@ const Section = (props) => {
     notification: <Notification />,
     membership: <MemberShip />,
     security: <Security />,
+    social_profile: <SocialProfile />
   };
 
   return <>{tabComponents[activeTab]}</>;
