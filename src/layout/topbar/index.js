@@ -18,7 +18,7 @@ const TopBar = (props) => {
   useEffect(() => {
     const authUserId = localStorage.getItem("auth-user-id");
     if (authUserId) setAuthId(authUserId);
-  });
+  }, []);
 
   const Authorization = TopIsAuthorized(Authorized, Unauthorized);
 

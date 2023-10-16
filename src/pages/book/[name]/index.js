@@ -19,7 +19,7 @@ const ReadBook = () => {
       cover: getBookContents?.cover,
       content: getBookContents?.content || [],
     });
-  }, [router.query.name]);
+  }, [router.query.name, router.query]);
 
   return (
     <Paper>
